@@ -182,7 +182,7 @@
         <nav class="js-mega-menu navbar navbar-expand-lg">
           <!-- Logo -->
           <a class="navbar-brand" href="./index.html" aria-label="Front">
-            <img src="{{ asset('template/assets/svg/logos/diskominfo.svg') }}" alt="Logo">
+            <img  style="margin-top:4px; width:300px;" src="{{ asset('template/assets/svg/logos/diskominfo.png') }}" alt="Logo">
           </a>
           <!-- End Logo -->
 
