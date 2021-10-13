@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <!-- Title -->
-  <title>Home Page | Diskominfo Wonosobo</title>
+  <title>Home Page | Diskominfo Wonosoboooo</title>
 
   <!-- Required Meta Tags Always Come First -->
   <meta charset="utf-8">
