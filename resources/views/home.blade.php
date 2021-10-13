@@ -547,19 +547,7 @@
                     <div class="row no-gutters">
                       <div class="col-lg-8">
                         <div class="navbar-promo-card-deck">
-                          <!-- Promo Item -->
-                          <div class="navbar-promo-card navbar-promo-item">
-                            <a class="navbar-promo-link" href="./demo-course/index.html">
-                              <div class="media align-items-center">
-                                <img class="navbar-promo-icon" src="./assets/svg/icons/icon-67.svg" alt="SVG">
-                                <div class="media-body">
-                                  <span class="navbar-promo-title">Course</span>
-                                  <span class="navbar-promo-text">Learn On-demand demo</span>
-                                </div>
-                              </div>
-                            </a>
-                          </div>
-                          <!-- End Promo Item -->
+                         
 
                           <!-- Promo Item -->
                           <div class="navbar-promo-card navbar-promo-item">
