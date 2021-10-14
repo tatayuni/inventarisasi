@@ -14,17 +14,35 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
-});
+    return view('home',[
+        "title" => "Beranda"
+    ]);
+})->name('home');
+
+
 Route::get('/layanan', function () {
-    return view('layanan');
-});
+    return view('layanan',[
+        "title" => "Layanan Online"
+    ]);
+})->name('layanan');
+
+
 Route::get('/aturan', function () {
-    return view('aturan');
-});
+    return view('aturan',[
+        "title" => "Aturan"
+    ]);
+})->name('aturan');
+
+
 Route::get('/inventarisasi', function () {
-    return view('inventarisasi');
-});
+    return view('inventarisasi',[
+        "title" => "Inventarisasi"
+    ]);
+})->name('inventarisasi');
+
+
 Route::get('/pantauan', function () {
-    return view('pantauan');
-});
+    return view('pantauan',[
+        "title" => "Pantauan"
+    ]);
+})->name('pantauan');
