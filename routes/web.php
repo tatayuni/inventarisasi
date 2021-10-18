@@ -46,3 +46,14 @@ Route::get('/pantauan', function () {
         "title" => "Pantauan"
     ]);
 })->name('pantauan');
+
+
+Route::get('/details', function () {
+    return view('details',[
+        "title" => "Details Aplikasi"
+    ]);
+})->name('pantauan');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');

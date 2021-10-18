@@ -7,7 +7,7 @@
             <!-- Logo -->
             <div class="mb-4">
               <a href="index.html" aria-label="Front">
-                <img class="brand" src="{{ asset('template/assets/svg/logos/diskominfo.png') }}" alt="Logo">
+                <img style="margin-top:2px; width:200px;" src="{{ asset('template/assets/svg/logos/diskominfoo.png') }}" alt="Logo">
               </a>
             </div>
             <!-- End Logo -->

@@ -415,7 +415,7 @@
                 <!-- Account Login -->
             <li class="list-inline-item">
               <div class="hs-unfold">
-                <a class="js-hs-unfold-invoker btn btn-icon btn-xs btn-ghost-secondary" href="javascript:;" data-toggle="modal" data-target="#signupModal">
+                <a class="js-hs-unfold-invoker btn btn-icon btn-xs btn-ghost-secondary" href="/login" data-target="#signupModal">
                   <i class="fas fa-user-circle"></i>
                 </a>
               </div>

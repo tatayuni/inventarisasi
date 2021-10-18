@@ -28,8 +28,8 @@
                 <p class="lead">Pelayanan publik yang berkualitas akan menjaga dan membentuk suatu sistem ketertiban dan masyarakat yang harmonis .</p>
               </div>
 
-              <a class="btn btn-primary btn-wide transition-3d-hover" href="./page-login-simple.html">Login</a>
-              <a class="btn btn-link btn-wide" href="#">Masuk <i class="fas fa-angle-right fa-sm ml-1"></i></a>
+              <a class="btn btn-primary btn-wide transition-3d-hover" href="/login">Login</a>
+              <a class="btn btn-link btn-wide" href="/register">Masuk <i class="fas fa-angle-right fa-sm ml-1"></i></a>
             </div>
           </div>
         </div>
@@ -47,7 +47,7 @@
               <use xlink:href="#mainHeroSVG1"/>
             </clipPath>
             <g transform="matrix(1 0 0 1 0 0)" clip-path="url(#mainHeroSVG2)">
-              <image width="750" height="750" xlink:href="{{ asset('template/assets/img/750x750/dieng2.jpg')}}" transform="matrix(1.4462 0 0 1.4448 52.8755 0)"></image>
+              <image width="750" height="750" xlink:href="{{ asset('template/assets/img/750x750/kominfo3.jpg')}}" transform="matrix(1.4462 0 0 1.4448 52.8755 0)"></image>
             </g>
           </svg>
         </figure>
