@@ -12,16 +12,6 @@
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="index.html">Home</a>
                                 </li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <ul class="nav navbar-nav float-right">
-                        <li class="dropdown dropdown-user nav-item"><a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown"><span class="mr-1 user-name text-bold-700"> Selamat Datang, </span><span class="avatar avatar-online"><img src="{{ asset('modern-admin/app-assets/images/portrait/small/avatar-s-19.png')}}" alt="avatar"><i></i></span></a>
-                            <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="user-profile.html"><i class="ft-user"></i> Edit Profile</a></a>
-                                <div class="dropdown-divider"></div><a class="dropdown-item" href="{{ route('home')}}"><i class="ft-power"></i> Logout</a>
-                            </div>
-                        </li>
-                    </ul>
                                 <li class="breadcrumb-item"><a href="#">Form Layouts</a>
                                 </li>
                                 <li class="breadcrumb-item active">Basic Forms
@@ -31,8 +21,8 @@
                     </div>
                 </div>
                 <div class="content-header-right col-md-6 col-12">
-                    <div class="btn-group float-md-right" role="group" aria-label="Button group with nested ">
-                        <button class="btn btn-info round box-shadow-2 px-2 mb-1" id="btnGroupDrop1" type="button" aria-haspopup="true" aria-expanded="false"><i class="ft-settings icon-left"></i> Settings</button>
+                <div class="btn-group float-md-right" role="group" aria-label="Button group with nested dropdown">
+                        <a href="{{route('inventarisasi.create')}}" class="btn btn-info round box-shadow-2 px-2 mb-1" id="btnGroupDrop1" aria-haspopup="true" aria-expanded="false"><i class="ft-file-plus icon-left"></i> Tambah Data</a>
                     </div>
                 </div>
             </div>
