@@ -54,6 +54,12 @@ Route::get('/details', function () {
     ]);
 })->name('pantauan');
 
+Route::get('/devan', function () {
+    return view('layouts.main_admin',[
+        "title" => "template"
+    ]);
+})->name('devan');
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
