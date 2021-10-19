@@ -92,7 +92,7 @@
     <div class="main-menu menu-fixed menu-light menu-accordion    menu-shadow " data-scroll-to-active="true">
         <div class="main-menu-content">
             <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-                <li class=" nav-item {{Request::is('dashboard') ? 'active' : ''}}"><a href="index.html"><i class="la la-home"></i><span class="menu-title" data-i18n="Dashboard">Dashboard</span></a>
+                <li class=" nav-item {{Request::is('dashboard') ? 'active' : ''}}"><a href="/dashboard"><i class="la la-home"></i><span class="menu-title" data-i18n="Dashboard">Dashboard</span></a>
                 </li>
                  <li class=" nav-item"><a href="/dashboard/data"><i class="la la-book"></i><span class="menu-title" data-i18n="Dashboard">Data Inventarisasi</span></a>
                 </li>
