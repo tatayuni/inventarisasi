@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardDataController;
+use App\Http\Controllers\InventarisasiController;
+use App\Http\Controllers\PendaftaranController;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,6 +62,9 @@ Route::get('/devan', function () {
         "title" => "template"
     ]);
 })->name('devan');
+
+Route::resource('inventarisasi', InventarisasiController::class);
+Route::resource('pendaftaran', PendaftaranController::class);
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
