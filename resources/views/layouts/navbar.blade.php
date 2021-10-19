@@ -275,7 +275,7 @@
                         "maxWidth": "900px"
                       }
                     }'>
-                  <a id="demosMegaMenu" class="hs-mega-menu-invoker nav-link {{ ($title === "Inventarisasi") ? 'active' : '' }}" href="{{ route('inventarisasi')}}" aria-haspopup="true" aria-expanded="false">Inventarisasi</a>
+                  <a id="demosMegaMenu" class="hs-mega-menu-invoker nav-link {{ ($title === "Inventarisasi") ? 'active' : '' }}" href="{{ route('layanan.inventarisasi')}}" aria-haspopup="true" aria-expanded="false">Inventarisasi</a>
 
                   <!-- Inventarisasi - Mega Menu -->
                   <div class="hs-mega-menu w-100" aria-labelledby="demosMegaMenu">

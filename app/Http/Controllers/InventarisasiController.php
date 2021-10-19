@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Inventarisasi;
 
 class InventarisasiController extends Controller
 {
@@ -34,7 +36,8 @@ class InventarisasiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = Inventarisasi::create($request->all());
+        return redirect()->back();
     }
 
     /**
@@ -45,7 +48,9 @@ class InventarisasiController extends Controller
      */
     public function show($id)
     {
-        //
+        $data = Inventarisasi::find($id);
+
+        return view('inventarisasi.show', compact('data'));
     }
 
     /**

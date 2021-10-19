@@ -37,13 +37,6 @@ Route::get('/aturan', function () {
 })->name('aturan');
 
 
-Route::get('/inventarisasi', function () {
-    return view('inventarisasi',[
-        "title" => "Inventarisasi"
-    ]);
-})->name('inventarisasi');
-
-
 Route::get('/pantauan', function () {
     return view('pantauan',[
         "title" => "Pantauan"
@@ -65,6 +58,12 @@ Route::get('/devan', function () {
 
 Route::resource('inventarisasi', InventarisasiController::class);
 Route::resource('pendaftaran', PendaftaranController::class);
+
+Route::get('layanan/inventarisasi', function () {
+    return view('inventarisasi',[
+        "title" => "Inventarisasi"
+    ]);
+})->name('layanan.inventarisasi');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
