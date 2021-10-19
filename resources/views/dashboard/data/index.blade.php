@@ -92,9 +92,9 @@
     <div class="main-menu menu-fixed menu-light menu-accordion    menu-shadow " data-scroll-to-active="true">
         <div class="main-menu-content">
             <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-                <li class=" nav-item {{Request::is('dashboard') ? 'active' : ''}}"><a href="/dashboard"><i class="la la-home"></i><span class="menu-title" data-i18n="Dashboard">Dashboard</span></a>
+                <li class=" nav-link {{Request::is('dashboard') ? 'active' : ''}}"><a href="/dashboard"><i class="la la-home"></i><span class="menu-title" data-i18n="Dashboard">Dashboard</span></a>
                 </li>
-                 <li class=" nav-item"><a href="/dashboard/data"><i class="la la-book"></i><span class="menu-title" data-i18n="Dashboard">Data Inventarisasi</span></a>
+                 <li class=" nav-link {{Request::is('dashboard/data') ? 'active' : ''}}"><a href="/dashboard/data"><i class="la la-book"></i><span class="menu-title" data-i18n="Dashboard">Data Inventarisasi</span></a>
                 </li>
                 <li class=" nav-item"><a href="index.html"><i class="la la-globe"></i><span class="menu-title" data-i18n="Dashboard">Pendaftaran Online</span></a>
                 </li>
@@ -109,7 +109,25 @@
     <div class="sidenav-overlay"></div>
     <div class="drag-target"></div>
 
-
+    <h2 class="text-center mt-2 mb-1">Data Inventarisasi</h2>
+    <div class="table-container">
+        <table class="table table-striped table-sm">
+          <thead>
+            <tr>
+              <th scope="col">No</th>
+              <th scope="col">Nama Aplikasi</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1,001</td>
+              <td>random</td>
+              <td>data</td>  
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
     <!-- BEGIN: Vendor JS-->`
     <script src="{{ asset('modern-admin/app-assets/vendors/js/vendors.min.js')}}"></script>
