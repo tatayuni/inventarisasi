@@ -9,6 +9,7 @@
     <meta name="description" content="Modern admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities with bitcoin dashboard.">
     <meta name="keywords" content="admin template, modern admin template, dashboard template, flat admin template, responsive admin template, web app, crypto dashboard, bitcoin dashboard">
     <meta name="author" content="PIXINVENT">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Dashboard</title>
     <link rel="apple-touch-icon" href="{{ asset('template/assets/svg/logos/diskominfoo.png') }}">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('modern-admin/app-assets/images/ico/favicon.ico')}}">
@@ -137,6 +138,9 @@
     <script src="{{ asset('modern-admin/app-assets/js/scripts/pages/dashboard-ecommerce.js')}}"></script>
     <script src="{{ asset('modern-admin/app-assets/js/scripts/tables/datatables/datatable-basic.js')}}"></script>
     <!-- END: Page JS-->
+
+    @stack('js')
+
 
 </body>
 <!-- END: Body-->

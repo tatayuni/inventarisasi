@@ -56,6 +56,7 @@ Route::get('/devan', function () {
     ]);
 })->name('devan');
 
+Route::get('/inventarisasi/list', [InventarisasiController::class, 'getInventarisasi'])->name('inventarisasi.list');
 Route::resource('inventarisasi', InventarisasiController::class);
 Route::resource('pendaftaran', PendaftaranController::class);
 

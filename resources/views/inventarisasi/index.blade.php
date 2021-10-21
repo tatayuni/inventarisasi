@@ -48,7 +48,7 @@
                                     <div class="card-body card-dashboard">
                                         <p class="card-text">Lets say you want to sort the fourth column (3) descending and the first column (0) ascending: your order: would look like this: order: [[ 3, 'desc' ], [ 0, 'asc' ]]</p>
                                         <div class="table-responsive">
-                                            <table class="table table-striped table-bordered default-ordering">
+                                            <table class="table table-striped table-bordered default-ordering devan">
                                                 <thead>
                                                     <tr>
                                                         <th>Name</th>
@@ -61,35 +61,6 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <tr>
-                                                        <td>Tiger Nixon</td>
-                                                        <td>System Architect</td>
-                                                        <td>Edinburgh</td>
-                                                        <td>61</td>
-                                                        <td>2011/04/25</td>
-                                                        <td>$320,800</td>
-                                                        <td>
-                                                            <div class="d-flex justify-content-center">
-                                                                <a href=""  data-toggle="tooltip" data-placement="bottom" title="Edit"><i class="ft-edit text-success"></i></a>
-                                                                <a href="" class="delete-data-table" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="ft-trash-2 ml-1 text-warning"></i></a>
-                                                                </div>
-                                                         </td>
-                                                       
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Garrett Winters</td>
-                                                        <td>Accountant</td>
-                                                        <td>Tokyo</td>
-                                                        <td>63</td>
-                                                        <td>2011/07/25</td>
-                                                        <td>$170,750</td>
-                                                        <td>
-                                                            <div class="d-flex justify-content-center">
-                                                                <a href=""  data-toggle="tooltip" data-placement="bottom" title="Edit"><i class="ft-edit text-success"></i></a>
-                                                                <a href="" class="delete-data-table" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="ft-trash-2 ml-1 text-warning"></i></a>
-                                                                </div>
-                                                        </td>
-                                                    </tr>
                                                 </tbody>
                                             </table>
                                         </div>
@@ -103,3 +74,32 @@
         </div>
     </div>
 @endsection
+
+@push('js')
+<script type="text/javascript">			
+		var table = $('.devan').DataTable({
+        processing: true,
+        serverSide: true,
+        ajax: "{{ route('inventarisasi.list') }}",
+        columns: [
+					{data: 'DT_RowIndex', name: 'DT_RowIndex'},
+                    {data: 'nama_aplikasi',  },
+                    {data: 'nama_opd', },
+                    {data: 'sifat_aplikasi', },
+                    {data: 'fungsi_aplikasi', },
+                    {data: 'integrasi_aplikasi', },
+                    // {data: 'jenis_aplikasi', },
+                    // {data: 'frekuensi_penggunaan', },
+                    // {data: 'lokasi_server', },
+                    // {data: 'domain_aplikasi', },
+                    // {data: 'kendala', },
+					    {
+						data: 'action', 
+						name: 'action', 
+						orderable: true, 
+						searchable: true
+                         },
+        ]
+    });
+</script>
+@endpush
