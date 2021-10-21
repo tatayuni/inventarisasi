@@ -6,7 +6,7 @@
         <div class="content-wrapper">
             <div class="content-header row">
                 <div class="content-header-left col-md-6 col-12 mb-2">
-                    <h3 class="content-header-title">Basic Forms</h3>
+                    <h3 class="content-header-title">Data Inventarisasi</h3>
                     <div class="row breadcrumbs-top">
                         <div class="breadcrumb-wrapper col-12">
                             <ol class="breadcrumb">
@@ -26,6 +26,17 @@
                     </div>
                 </div>
             </div>
+
+            @if(session('status'))
+            <div class="alert alert-icon-left alert-success alert-dismissible mb-2" role="alert">
+                <span class="alert-icon"><i class="la la-thumbs-o-up"></i></span>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <strong>Berhasil!</strong>  {{ session('status') }}
+            </div>
+            @endif
+            
             <div class="content-body">
               
                   <section id="ordering">
@@ -48,7 +59,7 @@
                                     <div class="card-body card-dashboard">
                                         <p class="card-text">Lets say you want to sort the fourth column (3) descending and the first column (0) ascending: your order: would look like this: order: [[ 3, 'desc' ], [ 0, 'asc' ]]</p>
                                         <div class="table-responsive">
-                                            <table class="table table-striped table-bordered default-ordering devan">
+                                            <table class="table table-striped table-bordered devan">
                                                 <thead>
                                                     <tr>
                                                         <th>Name</th>

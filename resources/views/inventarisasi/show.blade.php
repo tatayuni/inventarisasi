@@ -47,7 +47,7 @@
                                 <div class="card-content collapse show">
                                     <div class="card-body">
 
-                                    {{Form::model($data,['route' => 'inventarisasi.store', 'method' => 'post', 'class' => 'form form-horizontal','files' => true])}}
+                                    {{Form::model($data,['route' => ['inventarisasi.update', $data->id], 'method' => 'patch', 'class' => 'form form-horizontal','files' => true])}}
                                             <div class="form-body">
 
                                                 <div class="form-group">
