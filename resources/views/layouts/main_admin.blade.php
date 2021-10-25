@@ -100,9 +100,9 @@
                 </li>
                 <li class=" nav-item "><a href="#"><i class="la la-globe"></i><span class="menu-title" data-i18n="Invoice">Layanan Online</span></a>
                     <ul class="menu-content">
-                        <li class="{{Request::is('pendaftaran') ? 'active' : ''}}"><a class="menu-item" href="{{ route('pendaftaran.index') }}"><i></i><span data-i18n="Invoice Summary">Belum Punya Aplikasi</span></a>
+                        <li class="{{Request::is('layananonline') ? 'active' : ''}}"><a class="menu-item" href="{{ route('layananonline.index') }}"><i></i><span data-i18n="Invoice Summary">Belum Punya Aplikasi</span></a>
                         </li>
-                        <li class="{{Request::is('layananonline') ? 'active' : ''}}"><a class="menu-item" href="{{ route('layananonline.index') }}"><i></i><span data-i18n="Invoice Template">Sudah Punya Aplikasi</span></a>
+                        <li class="{{Request::is('pendaftaran') ? 'active' : ''}}"><a class="menu-item" href="{{ route('pendaftaran.index') }}"><i></i><span data-i18n="Invoice Template">Sudah Punya Aplikasi</span></a>
                         </li>
                     </ul>
                 </li>

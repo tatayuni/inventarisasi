@@ -60,11 +60,11 @@
                                             <table class="table table-striped table-bordered devan">
                                                 <thead>
                                                     <tr>
-                                                        <th>Name</th>
-                                                        <th>Position</th>
-                                                        <th>Office</th>
-                                                        <th>Age</th>
-                                                        <th>Start date</th>
+                                                        <th>No</th>
+                                                        <th>Nama</th>
+                                                        <th>OPD</th>
+                                                        <th>Email</th>
+                                                        <th>Whatsapp</th>  
                                                         <th>Aksi</th>
                                                     </tr>
                                                 </thead>
@@ -92,7 +92,7 @@
         columns: [
 					{data: 'DT_RowIndex', name: 'DT_RowIndex'},
                     {data: 'nama',  },
-                    {data: 'nama', },
+                    {data: 'opd', },
                     {data: 'email', },
                     {data: 'wa', },
 					    {

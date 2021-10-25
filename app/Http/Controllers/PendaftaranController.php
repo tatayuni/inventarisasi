@@ -51,7 +51,9 @@ class PendaftaranController extends Controller
      */
     public function show($id)
     {
-        //
+        $data = Sudahpunya::find($id);
+
+        return view('pendaftaran.show', compact('data'));
     }
 
     /**
@@ -85,7 +87,7 @@ class PendaftaranController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Sudahpunya::destroy($id);
     }
 
     public function getSudahpunya(Request $request)

@@ -60,11 +60,11 @@
                                             <table class="table table-striped table-bordered devan">
                                                 <thead>
                                                     <tr>
+                                                        <th>No</th>
                                                         <th>Name</th>
-                                                        <th>Position</th>
-                                                        <th>Office</th>
-                                                        <th>Age</th>
-                                                        <th>Start date</th>
+                                                        <th>OPD</th>
+                                                        <th>Email</th>
+                                                        <th>Whatsapp</th>  
                                                         <th>Aksi</th>
                                                     </tr>
                                                 </thead>

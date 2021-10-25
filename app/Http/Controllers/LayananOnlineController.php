@@ -89,7 +89,7 @@ class LayananOnlineController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Belumpunya::destroy($id);
     }
 
     public function getBelumpunya(Request $request)
@@ -102,8 +102,8 @@ class LayananOnlineController extends Controller
                 function ($data) {
                     $actionBtn = '
                     <div class="d-flex justify-content-center">
-                    <a href=" "  data-toggle="tooltip" data-placement="bottom" title="Edit"><i class="ft-edit text-success"></i></a>
-                    <a href="" class="delete-data-table" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="ft-trash-2 ml-1 text-warning"></i></a>
+                    <a href="' . route('layananonline.show', $data->id) . '"  data-toggle="tooltip" data-placement="bottom" title="Edit"><i class="ft-edit text-success"></i></a>
+                    <a href="' . route('layananonline.destroy', $data->id) . '" class="delete-data-table" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="ft-trash-2 ml-1 text-warning"></i></a>
                     </div>';
                     return $actionBtn;
                 }
