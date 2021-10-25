@@ -58,7 +58,7 @@
             <div class="navbar-header">
                 <ul class="nav navbar-nav flex-row">
                     <li class="nav-item mobile-menu d-md-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu font-large-1"></i></a></li>
-                    <li class="nav-item"><a class="navbar-brand" href="index.html"><img  style="margin-top:4px; width:200px;" class="brand-logo" alt="modern admin logo" src="{{ asset('template/assets/svg/logos/diskominfoo.png') }}">
+                    <li class="nav-item"><a class="navbar-brand" href="{{ route('dashboard') }}"><img  style="margin-top:4px; width:200px;" class="brand-logo" alt="modern admin logo" src="{{ asset('template/assets/svg/logos/diskominfoo.png') }}">
                         </a></li>
                     <li class="nav-item d-md-none"><a class="nav-link open-navbar-container" data-toggle="collapse" data-target="#navbar-mobile"><i class="la la-ellipsis-v"></i></a></li>
                 </ul>
@@ -91,15 +91,22 @@
 
     <!-- BEGIN: Main Menu-->
 
-    <div class="main-menu menu-fixed menu-light menu-accordion    menu-shadow " data-scroll-to-active="true">
+    <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow " data-scroll-to-active="true">
         <div class="main-menu-content">
             <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-                <li class=" nav-item {{Request::is('dashboard') ? 'active' : ''}}"><a href="index.html"><i class="la la-home"></i><span class="menu-title" data-i18n="Dashboard">Dashboard</span></a>
+                <li class=" nav-item {{Request::is('dashboard') ? 'active' : ''}}"><a href="{{ route('dashboard') }}"><i class="la la-home"></i><span class="menu-title" data-i18n="Dashboard">Dashboard</span></a>
                 </li>
-                 <li class=" nav-item"><a href="{{ route('inventarisasi.index') }}"><i class="la la-book"></i><span class="menu-title" data-i18n="Dashboard">Data Inventarisasi</span></a>
+                 <li class=" nav-item {{Request::is('inventarisasi') ? 'active' : ''}}"><a href="{{ route('inventarisasi.index') }}"><i class="la la-book"></i><span class="menu-title" data-i18n="Dashboard">Data Inventarisasi</span></a>
                 </li>
-                <li class=" nav-item"><a href="{{ route('pendaftaran.index') }}"><i class="la la-globe"></i><span class="menu-title" data-i18n="Dashboard">Pendaftaran Online</span></a>
+                <li class=" nav-item "><a href="#"><i class="la la-globe"></i><span class="menu-title" data-i18n="Invoice">Layanan Online</span></a>
+                    <ul class="menu-content">
+                        <li class="{{Request::is('pendaftaran') ? 'active' : ''}}"><a class="menu-item" href="{{ route('pendaftaran.index') }}"><i></i><span data-i18n="Invoice Summary">Belum Punya Aplikasi</span></a>
+                        </li>
+                        <li class="{{Request::is('layananonline') ? 'active' : ''}}"><a class="menu-item" href="{{ route('layananonline.index') }}"><i></i><span data-i18n="Invoice Template">Sudah Punya Aplikasi</span></a>
+                        </li>
+                    </ul>
                 </li>
+                
                     </ul>
                 </li>
             </ul>

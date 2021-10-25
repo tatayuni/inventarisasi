@@ -88,13 +88,13 @@
 		var table = $('.devan').DataTable({
         processing: true,
         serverSide: true,
-        ajax: "{{ route('sudah_punya_aplikasi.list') }}",
+        ajax: "{{ route('belum_punya_aplikasi.list') }}",
         columns: [
 					{data: 'DT_RowIndex', name: 'DT_RowIndex'},
-                    {data: 'nama_pengelola',  },
-                    {data: 'nama_opd', },
-                    {data: 'email_pengelola', },
-                    {data: 'wa_pengelola', },
+                    {data: 'nama',  },
+                    {data: 'nama', },
+                    {data: 'email', },
+                    {data: 'wa', },
 					    {
 						data: 'action', 
 						name: 'action', 

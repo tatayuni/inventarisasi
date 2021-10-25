@@ -67,7 +67,7 @@
       <div class="row mx-n2 mx-lg-n3">
         <div class="col-sm-6 col-lg-4 px-2 px-lg-3 mb-3 mb-lg-0" data-aos="fade-up">
           <!-- Card -->
-          <a class="card bg-primary text-left h-100 transition-3d-hover" href="{{route ('layanan')}}">
+          <a class="card bg-primary text-left h-100 transition-3d-hover" href="{{route ('layanan-online')}}">
             <div class="card-body">
               <div class="mb-5">
                 <h3 class="text-white">Layanan Online</h3>
@@ -76,7 +76,7 @@
               <img class="img-fluid w-100" src="{{ asset('template/assets/svg/illustrations/docs-frame.svg') }}" alt="Image Description">
             </div>
             <div class="card-footer border-0 bg-transparent pt-0">
-              <span class="font-size-1 text-white font-weight-bold">Ajukan Surat <i class="fas fa-angle-right fa-sm ml-1"></i></span>
+              <span class="font-size-1 text-white font-weight-bold">Ajukan Layanan <i class="fas fa-angle-right fa-sm ml-1"></i></span>
             </div>
           </a>
           <!-- End Card -->
@@ -101,7 +101,7 @@
 
         <div class="col-sm-6 col-lg-4 px-2 px-lg-3" data-aos="fade-up" data-aos-delay="200">
           <!-- Card -->
-          <a class="js-go-to card bg-warning text-left h-100 transition-3d-hover" href="{{route ('aturan')}}"
+          <a class="js-go-to card bg-warning text-left h-100 transition-3d-hover" href="{{route ('layanan-online')}}"
              data-hs-go-to-options='{
               "targetSelector": "#demoExamplesSection",
               "offsetTop": 0,
@@ -111,13 +111,13 @@
              }'>
             <div class="card-body">
               <div class="mb-5">
-                <h3 class="text-white">Aturan</h3>
-                <p class="text-white">Aturan dan langkah-langkah pengajuan surat secara online.</p>
+                <h3 class="text-white">Pantauan</h3>
+                <p class="text-white">Untuk mengecek status layanan online</p>
               </div>
               <img class="img-fluid w-100" src="{{ asset('template/assets/svg/illustrations/layouts-frame.svg')}}" alt="Image Description">
             </div>
             <div class="card-footer border-0 bg-transparent pt-0">
-              <span class="font-size-1 text-white font-weight-bold">Baca Aturan <i class="fas fa-angle-right fa-sm ml-1"></i></span>
+              <span class="font-size-1 text-white font-weight-bold">Lihat Pantauan <i class="fas fa-angle-right fa-sm ml-1"></i></span>
             </div>
           </a>
           <!-- End Card -->

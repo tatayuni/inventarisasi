@@ -238,17 +238,23 @@
                 </li>
                 <!-- End Home -->
 
+                <!-- Aturan -->
+                <li class="hs-has-mega-menu "
+                    data-hs-mega-menu-item-options='{
+                      "desktop": {
+                        "position": "right",
+                        "maxWidth": "440px"
+                      }
+                    }'>
+                  <a id="shopMegaMenu" class="hs-mega-menu-invoker nav-link  {{ ($title === "Beranda") ? 'active' : '' }}" href="{{ route('home')}}" aria-haspopup="true" aria-expanded="false">Beranda</a>
 
-                <!-- Layanan Online -->
-                <li class="hs-has-sub-menu navbar-nav-item">
-                  <a id="blogMegaMenu" class="hs-mega-menu-invoker nav-link {{ ($title === "Layanan Online") ? 'active' : '' }}" href="{{ route('layanan') }}" aria-haspopup="true" aria-expanded="false" aria-labelledby="blogSubMenu">Layanan Online</a>
-
-                  <!-- Blog - Submenu -->
-                  <div id="blogSubMenu" class="hs-sub-menu" aria-labelledby="blogMegaMenu" style="min-width: 230px;">
+                  <!-- Aturan - Mega Menu -->
+                  <div class="hs-mega-menu" aria-labelledby="shopMegaMenu">
                   </div>
-                  <!-- End Submenu -->
+                  <!-- End Aturan - Mega Menu -->
                 </li>
-                <!-- End Blog -->
+                <!-- End Aturan -->
+
 
                 <!-- Aturan -->
                 <li class="hs-has-mega-menu "
@@ -258,7 +264,7 @@
                         "maxWidth": "440px"
                       }
                     }'>
-                  <a id="shopMegaMenu" class="hs-mega-menu-invoker nav-link  {{ ($title === "Aturan") ? 'active' : '' }}" href="{{ route('aturan')}}" aria-haspopup="true" aria-expanded="false">Aturan</a>
+                  <a id="shopMegaMenu" class="hs-mega-menu-invoker nav-link  {{ ($title === "Layanan Online") ? 'active' : '' }}" href="{{ route('layanan-online')}}" aria-haspopup="true" aria-expanded="false">Layanan Online</a>
 
                   <!-- Aturan - Mega Menu -->
                   <div class="hs-mega-menu" aria-labelledby="shopMegaMenu">

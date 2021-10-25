@@ -3,11 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Sudahpunya;
+use App\Models\Belumpunya;
 use DataTables;
 use Session;
 
-class PendaftaranController extends Controller
+
+class LayananOnlineController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +17,7 @@ class PendaftaranController extends Controller
      */
     public function index()
     {
-        return view('pendaftaran.index');
+        return view('layananonline.index');
     }
 
     /**
@@ -26,7 +27,7 @@ class PendaftaranController extends Controller
      */
     public function create()
     {
-       //
+        //
     }
 
     /**
@@ -35,11 +36,12 @@ class PendaftaranController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-
     public function store(Request $request)
     {
-        $data = Sudahpunya::create($request->all());
-        Session::flash('keterangan', 'Data berhasil di simpan');
+        $data = Belumpunya::create($request->all());
+        if($data){
+            Session::flash('keterangan', 'Data berhasil di simpan');
+        }
         return redirect(route('layanan-online'));
     }
 
@@ -51,7 +53,9 @@ class PendaftaranController extends Controller
      */
     public function show($id)
     {
-        //
+        $data = Belumpunya::find($id);
+
+        return view('layananonline.show', compact('data'));
     }
 
     /**
@@ -88,9 +92,9 @@ class PendaftaranController extends Controller
         //
     }
 
-    public function getSudahpunya(Request $request)
+    public function getBelumpunya(Request $request)
     {
-        $data = Sudahpunya::get();
+        $data = Belumpunya::orderBy('created_at', 'asc')->get();
         return DataTables::of($data)
             ->addIndexColumn()
             ->addColumn(
@@ -98,24 +102,24 @@ class PendaftaranController extends Controller
                 function ($data) {
                     $actionBtn = '
                     <div class="d-flex justify-content-center">
-                    <a href="' . route('pendaftaran.show', $data->id) . ' "  data-toggle="tooltip" data-placement="bottom" title="Edit"><i class="ft-edit text-success"></i></a>
-                    <a href="' . route('pendaftaran.destroy', $data->id) . ' " class="delete-data-table" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="ft-trash-2 ml-1 text-warning"></i></a>
+                    <a href=" "  data-toggle="tooltip" data-placement="bottom" title="Edit"><i class="ft-edit text-success"></i></a>
+                    <a href="" class="delete-data-table" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="ft-trash-2 ml-1 text-warning"></i></a>
                     </div>';
                     return $actionBtn;
                 }
             )
-            ->editColumn('nama_pengelola', function ($data) {
-                return $data->nama_pengelola;
+            ->editColumn('nama', function ($data) {
+                return $data->nama;
             })
 
-            ->editColumn('email_pengelola', function ($data) {
-                return $data->email_pengelola;
+            ->editColumn('opd', function ($data) {
+                return $data->opd;
             })
-            ->editColumn('nama_opd', function ($data) {
-                return $data->nama_opd;
+            ->editColumn('email', function ($data) {
+                return $data->email;
             })
-            ->editColumn('wa_pengelola', function ($data) {
-                return $data->wa_pengelola;
+            ->editColumn('wa', function ($data) {
+                return $data->wa;
             })
             ->rawColumns(['action', 'status'])
             ->make(true);
