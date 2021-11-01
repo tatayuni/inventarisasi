@@ -37,11 +37,11 @@ Route::get('/pantauan', function () {
 })->name('pantauan');
 
 
-Route::get('/details', function () {
-    return view('details',[
-        "title" => "Details Aplikasi"
+Route::get('/prosedur', function () {
+    return view('prosedur',[
+        "title" => "Prosedur"
     ]);
-})->name('details');
+})->name('prosedur');
 
 Route::get('/devan', function () {
     return view('layouts.main_admin',[

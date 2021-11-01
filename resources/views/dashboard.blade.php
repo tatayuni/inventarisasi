@@ -14,14 +14,7 @@
                                 </li>
                             </ul>
                         </li>
-                    </ul>
-                    <ul class="nav navbar-nav float-right">
-                        <li class="dropdown dropdown-user nav-item"><a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown"><span class="mr-1 user-name text-bold-700"> Selamat Datang, </span><span class="avatar avatar-online"><img src="{{ asset('modern-admin/app-assets/images/portrait/small/avatar-s-19.png')}}" alt="avatar"><i></i></span></a>
-                            <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="user-profile.html"><i class="ft-user"></i> Edit Profile</a></a>
-                                <div class="dropdown-divider"></div><a class="dropdown-item" href="{{ route('home')}}"><i class="ft-power"></i> Logout</a>
-                            </div>
-                        </li>
-                    </ul>
+                    </ul> 
                                 <li class="breadcrumb-item"><a href="#">Form Layouts</a>
                                 </li>
                                 <li class="breadcrumb-item active">Basic Forms
@@ -43,7 +36,7 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title">Default ordering</h4>
+                                    <h4 class="card-title">Data Domain dan Subdomain Website Resmi OPD di Lingkungan Pemerintah Kabupaten Wonosobo</h4>
                                     <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
                                     <div class="heading-elements">
                                         <ul class="list-inline mb-0">
@@ -56,12 +49,11 @@
                                 </div>
                                 <div class="card-content collapse show">
                                     <div class="card-body card-dashboard">
-                                        <p class="card-text">Lets say you want to sort the fourth column (3) descending and the first column (0) ascending: your order: would look like this: order: [[ 3, 'desc' ], [ 0, 'asc' ]]</p>
                                         <div class="table-responsive">
                                             <table class="table table-striped table-bordered default-ordering">
                                                 <thead>
                                                     <tr>
-                                                        <th>Name</th>
+                                                        <th>No</th>
                                                         <th>Position</th>
                                                         <th>Office</th>
                                                         <th>Age</th>

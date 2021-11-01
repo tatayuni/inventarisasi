@@ -17,7 +17,7 @@
                   <span class="text-primary text-highlight-warning">
                     <span class="js-text-animation"
                           data-hs-typed-options='{
-                            "strings": ["sejahtera.", "damai.", "mobilitas."],
+                            "strings": ["sejahtera.", "maju.", "smartcity."],
                             "typeSpeed": 90,
                             "loop": true,
                             "backSpeed": 30,
@@ -29,7 +29,6 @@
               </div>
 
               <a class="btn btn-primary btn-wide transition-3d-hover" href="/login">Login</a>
-              <a class="btn btn-link btn-wide" href="/register">Masuk <i class="fas fa-angle-right fa-sm ml-1"></i></a>
             </div>
           </div>
         </div>

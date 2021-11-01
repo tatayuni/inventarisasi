@@ -76,7 +76,20 @@ class PendaftaranController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        Sudahpunya::find($id)->update([
+            'nama_pengelola'=>$request->nama_pengelola,
+            'nama_opd'=>$request->nama_opd,
+            'email_pengelola'=> $request->email_pengelola,
+            'wa_pengelola'=>$request->wa_pengelola,
+            'subdomain'=>$request->subdomain,
+            'php'=>$request->php,
+            'versi_db'=>$request->versi_db,
+            'bahasa_pemrograman'=>$request->bahasa_pemrograman
+           
+        ]);
+
+        Session::flash('status', 'Data berhasil di update');
+        return redirect(route('pendaftaran.index'));
     }
 
     /**

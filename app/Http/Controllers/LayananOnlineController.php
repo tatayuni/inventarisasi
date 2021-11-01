@@ -78,7 +78,17 @@ class LayananOnlineController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        Belumpunya::find($id)->update([
+            'nama'=>$request->nama,
+            'opd'=>$request->opd,
+            'email'=> $request->email,
+            'wa'=>$request->wa,
+            'deskripsi'=>$request->deskripsi,
+            'alur'=>$request->alur,
+        ]);
+
+        Session::flash('status', 'Data berhasil di update');
+        return redirect(route('layananonline.index'));
     }
 
     /**

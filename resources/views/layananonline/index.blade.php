@@ -10,11 +10,11 @@
                     <div class="row breadcrumbs-top">
                         <div class="breadcrumb-wrapper col-12">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.html">Home</a>
+                                <li class="breadcrumb-item"><a href="index.html">Dashboard</a>
                                 </li>
-                                <li class="breadcrumb-item"><a href="#">Form Layouts</a>
+                                <li class="breadcrumb-item"><a href="#">Layanan Online</a>
                                 </li>
-                                <li class="breadcrumb-item active">Basic Forms
+                                <li class="breadcrumb-item active">Belum Mempunyai Aplikasi
                                 </li>
                             </ol>
                         </div>
@@ -42,7 +42,7 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title">Default ordering</h4>
+                                    <h4 class="card-title">Belum Mempunyai Aplikasi</h4>
                                     <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
                                     <div class="heading-elements">
                                         <ul class="list-inline mb-0">
@@ -55,7 +55,6 @@
                                 </div>
                                 <div class="card-content collapse show">
                                     <div class="card-body card-dashboard">
-                                        <p class="card-text">Lets say you want to sort the fourth column (3) descending and the first column (0) ascending: your order: would look like this: order: [[ 3, 'desc' ], [ 0, 'asc' ]]</p>
                                         <div class="table-responsive">
                                             <table class="table table-striped table-bordered devan">
                                                 <thead>
@@ -64,7 +63,7 @@
                                                         <th>Nama</th>
                                                         <th>OPD</th>
                                                         <th>Email</th>
-                                                        <th>Whatsapp</th>  
+                                                        <th>Whatsapp</th>   
                                                         <th>Aksi</th>
                                                     </tr>
                                                 </thead>

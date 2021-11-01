@@ -39,21 +39,13 @@
 
   @if(!Session::has('keterangan'))
     
-<main>
-    <div class="fluid py-3"> </div>   
-    <div class="row align-items-md-stretch">
-      <div class="col-md-6">
-        <div class="h-100 p-5 text-white bg-dark rounded-3">
-          <h2 class="text-white">Prosedur</h2>
-          <p>Adapun prosedur untuk mengajukan surat pendaftaran secara online adalah sebagai berikut.</p>
-          <button class="btn btn-outline-light" type="button">Details</button>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="h-100 p-5 bg-light border rounded-3">
-          <h2>Aturan</h2>
-          <p>Adapun aturan-aturan saat pengajuan surat online adalah sebagai berikut.</p>
-          <button class="btn btn-outline-secondary" type="button">Details</button>
+<main>  
+    <div class="d-flex gap-5 justify-content-center" id="dropdownIcons">
+      <div class="col-md-9 ">
+        <div class="h-100 p-5 text-white bg-dark rounded-3 ">
+        <h1 class="text-white">Prosedur</h1>
+        <p>Bagi Organisasi Perangkat Daerah di lingkungan Kabupaten Wonosobo yang akan membuat/membangun website atau aplikasi dapat mengajukan permohonan kepada Dinas Komunikasi dan Informatika Kabupaten Wonosobo dengan prsedur sebagai berikut.</p>
+        <a class="btn btn-outline-light" href="{{ route('prosedur')}}" role="button">Lihat Prosedur &raquo;</a>
         </div>
       </div>
     </div>
