@@ -2,119 +2,409 @@
 
 @section('container')
      
-
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.88.1">
-    <title>Album example · Bootstrap v5.1</title>
+<head>
+  <!-- Title -->
+  <title>Inventarisasi</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/album/">
+  <!-- Required Meta Tags Always Come First -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./favicon.ico">
 
-    <!-- Bootstrap core CSS -->
-<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
+  <!-- CSS Implementing Plugins -->
+  <link rel="stylesheet" href="{{ asset('template/assets/vendor/fontawesome/css/all.min.css')}}">
+  <link rel="stylesheet" href="{{ asset('template/assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.css')}}">
+  <link rel="stylesheet" href="{{ asset('template/assets/vendor/slick-carousel/slick/slick.css')}}">
+  <link rel="stylesheet" href="{{ asset('template/assets/vendor/aos/dist/aos.css')}}">
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
+  <!-- CSS Front Template -->
+  <link rel="stylesheet" href="{{ asset('template/assets/css/theme.min.css')}}">
+</head>
+<body>
+  <!-- ========== HEADER ========== -->
+  <header id="header" class="header center-aligned-navbar header-bg-transparent header-white-nav-links-lg header-abs-top"
+          data-hs-header-options='{
+            "fixMoment": 1000,
+            "fixEffect": "slide"
+          }'>
+    <div class="header-section">
+      <div id="logoAndNav" class="container">
+        <!-- Nav -->
+        <nav class="js-mega-menu navbar navbar-expand-lg">
+
+          <!-- Secondary Content -->
+          <div class="navbar-nav-wrap-content text-center">
+            <div class="d-none d-lg-block">
+            </div>
+          </div>
+          <!-- End Secondary Content -->
+
+          <!-- Responsive Toggle Button -->
+          <button type="button" class="navbar-toggler btn btn-icon btn-sm rounded-circle"
+                  aria-label="Toggle navigation"
+                  aria-expanded="false"
+                  aria-controls="navBar"
+                  data-toggle="collapse"
+                  data-target="#navBar">
+            <span class="navbar-toggler-default">
+              <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                <path fill="currentColor" d="M17.4,6.2H0.6C0.3,6.2,0,5.9,0,5.5V4.1c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,5.9,17.7,6.2,17.4,6.2z M17.4,14.1H0.6c-0.3,0-0.6-0.3-0.6-0.7V12c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,13.7,17.7,14.1,17.4,14.1z"/>
+              </svg>
+            </span>
+            <span class="navbar-toggler-toggled">
+              <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                <path fill="currentColor" d="M11.5,9.5l5-5c0.2-0.2,0.2-0.6-0.1-0.9l-1-1c-0.3-0.3-0.7-0.3-0.9-0.1l-5,5l-5-5C4.3,2.3,3.9,2.4,3.6,2.6l-1,1 C2.4,3.9,2.3,4.3,2.5,4.5l5,5l-5,5c-0.2,0.2-0.2,0.6,0.1,0.9l1,1c0.3,0.3,0.7,0.3,0.9,0.1l5-5l5,5c0.2,0.2,0.6,0.2,0.9-0.1l1-1 c0.3-0.3,0.3-0.7,0.1-0.9L11.5,9.5z"/>
+              </svg>
+            </span>
+          </button>
+          <!-- End Responsive Toggle Button -->
+      </div>
+    </div>
+  </header>
+  <!-- ========== END HEADER ========== -->
+
+  <!-- ========== MAIN ========== -->
+  <main id="content" role="main">
+    <!-- Hero Section -->
+    <div class="position-relative border-bottom">
+      <!-- Hero Carousel Main -->
+      <div class="container mt-9 py-5">
+        <div class="js-slide gradient-y-overlay-sm-gray-900 bg-img-hero" style="background-image: url(./assets/img/1920x800/img2.jpg);">
+          <!-- Slide #1 -->
+          </div>
+          <!-- End Slide #1 -->
+        </div>
+
+
+    <!-- Features Section -->
+    <div class="bg-dark rounded-lg mx-3 mx-xl-10" style="background-image: url{{ asset('template/assets/svg/components/abstract-shapes-20.svg')}};">
+      <div class="container-xl container-fluid space-1 space-md-2 px-4 px-md-8 px-lg-10">
+        <div class="px-3">
+          <!-- Title -->
+          <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
+            <span class="d-block small text-white-70 font-weight-bold text-cap mb-2">DISKOMINFO</span>
+            <h2 class="text-white">Sistem Informasi Inventarisasi Aplikasi OPD</h2>
+          </div>
+          <!-- End Title -->
+
+          <!-- Slick Carousel -->
+          <div class="js-slick-carousel slick slick-equal-height ie-slick-equal-height slick-gutters-3"
+              data-hs-slick-carousel-options='{
+                 "prevArrow": "<span class=\"fas fa-arrow-left slick-arrow slick-arrow-primary-white slick-arrow-left slick-arrow-centered-y shadow-soft rounded-circle ml-n2\"></span>",
+                 "nextArrow": "<span class=\"fas fa-arrow-right slick-arrow slick-arrow-primary-white slick-arrow-right slick-arrow-centered-y shadow-soft rounded-circle mr-n2\"></span>",
+                 "slidesToShow": 3,
+                 "infinite": true,
+                 "dots": true,
+                 "dotsClass": "slick-pagination slick-pagination-white d-none mt-5",
+                 "responsive": [{
+                   "breakpoint": 992,
+                   "settings": {
+                     "slidesToShow": 2
+                     }
+                   }, {
+                   "breakpoint": 768,
+                   "settings": {
+                     "slidesToShow": 2
+                     }
+                   }, {
+                   "breakpoint": 554,
+                   "settings": {
+                     "slidesToShow": 1
+                   }
+                 }]
+               }'>
+            <div class="js-slide mb-4">
+              <!-- Card Info -->
+              <div class="card h-100">
+                <img class="card-img-top" src="{{ asset('template/assets/img/480x320/img7.jpg')}}" alt="Image Description">
+                <div class="card-body">
+                  <div class="max-w-13rem w-100 mb-3">
+                    <img class="img-fluid" src="{{ asset('template/assets/svg/clients-logo/airbnb-original.svg')}}" alt="Logo">
+                  </div>
+                  <p class="mb-0">Front Projects has proved to be most efficient cloud based project tracking and bug tracking tool.</p>
+                </div>
+                <div class="card-footer border-0 pt-0">
+                  <a class="font-weight-bold" href="./page-customer-story.html">Read story <i class="fas fa-angle-right fa-sm ml-1"></i></a>
+                </div>
+              </div>
+              <!-- End Card Info -->
+            </div>
+
+            <div class="js-slide mb-4">
+              <!-- Card Info -->
+              <div class="card h-100">
+                <img class="card-img-top" src="{{ asset('template/assets/img/480x320/img6.jpg')}}" alt="Image Description">
+                <div class="card-body">
+                  <div class="max-w-13rem w-100 mb-3">
+                    <img class="img-fluid" src="{{ asset('template/assets/svg/clients-logo/slack-original.svg')}}" alt="Logo">
+                  </div>
+                  <p class="mb-0">Front Projects has proved to be most efficient cloud based project tracking and bug tracking tool.</p>
+                </div>
+                <div class="card-footer border-0 pt-0">
+                  <a class="font-weight-bold" href="./page-customer-story.html">Read story <i class="fas fa-angle-right fa-sm ml-1"></i></a>
+                </div>
+              </div>
+              <!-- End Card Info -->
+            </div>
+
+            <div class="js-slide mb-4">
+              <!-- Card Info -->
+              <div class="card h-100">
+                <img class="card-img-top" src="{{ asset('template/assets/img/480x320/img14.jpg')}}" alt="Image Description">
+                <div class="card-body">
+                  <div class="max-w-13rem w-100 mb-3">
+                    <img class="img-fluid" src="{{ asset('template/assets/svg/clients-logo/paypal-original.svg')}}" alt="Logo">
+                  </div>
+                  <p class="mb-0">Front Projects has proved to be most efficient cloud based project tracking and bug tracking tool.</p>
+                </div>
+                <div class="card-footer border-0 pt-0">
+                  <a class="font-weight-bold" href="./page-customer-story.html">Read story <i class="fas fa-angle-right fa-sm ml-1"></i></a>
+                </div>
+              </div>
+              <!-- End Card Info -->
+            </div>
+
+            <div class="js-slide mb-4">
+              <!-- Card Info -->
+              <div class="card h-100">
+                <img class="card-img-top" src="{{ asset('template/assets/img/480x320/img12.jpg')}}" alt="Image Description">
+                <div class="card-body">
+                  <div class="max-w-13rem w-100 mb-3">
+                    <img class="img-fluid" src="{{ asset('template/assets/svg/clients-logo/fitbit-original.svg')}}" alt="Logo">
+                  </div>
+                  <p class="mb-0">Google is an innovator in public safety technology. First-to-market with TASER conducted energy weapons (CEWs).</p>
+                </div>
+                <div class="card-footer border-0 pt-0">
+                  <a class="font-weight-bold" href="./page-customer-story.html">Read story <i class="fas fa-angle-right fa-sm ml-1"></i></a>
+                </div>
+              </div>
+              <!-- End Card Info -->
+            </div>
+
+            <div class="js-slide mb-4">
+              <!-- Card Info -->
+              <div class="card h-100">
+                <img class="card-img-top" src="{{ asset('template/assets/img/480x320/img27.jpg')}}" alt="Image Description">
+                <div class="card-body">
+                  <div class="max-w-13rem w-100 mb-3">
+                    <img class="img-fluid" src="{{ asset('template/assets/svg/clients-logo/hubspot-original.svg')}}" alt="Logo">
+                  </div>
+                  <p class="mb-0">Visitors can build a form or survey before signing up, but in order to save and share it.</p>
+                </div>
+                <div class="card-footer border-0 pt-0">
+                  <a class="font-weight-bold" href="./page-customer-story.html">Read story <i class="fas fa-angle-right fa-sm ml-1"></i></a>
+                </div>
+              </div>
+              <!-- End Card Info -->
+            </div>
+          </div>
+          <!-- End Slick Carousel -->
+        </div>
+      </div>
+    </div>
+    <!-- End Features Section -->
+
+    <!-- Features Section -->
+    <div class="overflow-hidden">
+      <div class="container space-2 space-lg-1 mb-5">
+        <!-- Title -->
+        <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
+          <span class="d-block small font-weight-bold text-cap mb-2">DISKOMINFO</span>
+          <h2>Organisasi Perangkat Daerah dengan Domain dari Diskominfo </h2>
+        </div>
+        <!-- End Title -->
+
+        <div class="w-md-80 mx-md-auto">
+          <div class="row justify-content-lg-center align-items-md-center">
+            <div class="col-md-5 mb-7 mb-md-0">
+              <!-- Features -->
+              <div class="media mb-4">
+                <span class="icon icon-xs icon-soft-primary icon-circle mr-3">
+                  <i class="fas fa-check"></i>
+                </span>
+                <div class="media-body text-dark">
+                Bagian Pemerintahan Setda
+                </div>
+              </div>
+              <div class="media mb-4">
+                <span class="icon icon-xs icon-soft-primary icon-circle mr-3">
+                  <i class="fas fa-check"></i>
+                </span>
+                <div class="media-body text-dark">
+                DPMPTSP   
+                </div>
+              </div>
+              <div class="media mb-4">
+                <span class="icon icon-xs icon-soft-primary icon-circle mr-3">
+                  <i class="fas fa-check"></i>
+                </span>
+                <div class="media-body text-dark">
+                  Bappeda
+                </div>
+              </div>
+              <div class="media mb-4">
+                <span class="icon icon-xs icon-soft-primary icon-circle mr-3">
+                  <i class="fas fa-check"></i>
+                </span>
+                <div class="media-body text-dark">
+                  Dikpora
+                </div>
+              </div>
+              <div class="media mb-4">
+                <span class="icon icon-xs icon-soft-primary icon-circle mr-3">
+                  <i class="fas fa-check"></i>
+                </span>
+                <div class="media-body text-dark">
+                 BPPKAD
+                </div>
+              </div>
+              <a class="media" href="#">
+                <span class="icon icon-xs icon-soft-primary icon-circle mr-3">
+                  <i class="fas fa-ellipsis-h"></i>
+                </span>
+                <div class="media-body">
+                  Dan Sebagainya
+                </div>
+              </a>
+              <!-- End Features -->
+            </div>
+
+            <div class="col-md-7 col-lg-5 mb-6">
+              <div class="position-relative">
+                <!-- Card -->
+                <div class="card">
+                  <div class="card-body">
+                    <figure class="w-100 max-w-6rem mb-4">
+                      <img class="img-fluid" src="{{ asset('template/assets/svg/icons/icon-2.svg')}}" alt="SVG">
+                    </figure>
+                    <h3>Apa itu Sistem Informasi Inventarisasi Aplikasi OPD?</h3>
+                    <p>Sistem Informasi Inventarisasi Aplikasi OPD adalah Sistem Informasi atau daftar data inventarisasi aplikasi milik Dinas Komunikasi dan Informatika Kabupaten Wonosobo yang dipakai oleh Organisasi Perangkat Daerah yang ada di lingkungan Kabupaten Wonosobo.</p>
+                  </div>
+                </div>
+                <!-- End Card -->
+
+                <!-- SVG Elements -->
+                <figure class="max-w-19rem w-100 position-absolute bottom-0 right-0 z-index-n1">
+                  <div class="mb-n7 mr-n7">
+                    <img class="img-fluid" src="{{ asset('template/assets/svg/components/dots-2.svg')}}" alt="Image Description">
+                  </div>
+                </figure>
+                <!-- End SVG Elements -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Features Section -->
+  </main>
+  <!-- ========== END MAIN ========== -->
+
+
+  <!-- Go to Top -->
+  <a class="js-go-to go-to position-fixed" href="javascript:;" style="visibility: hidden;"
+     data-hs-go-to-options='{
+       "offsetTop": 700,
+       "position": {
+         "init": {
+           "right": 15
+         },
+         "show": {
+           "bottom": 15
+         },
+         "hide": {
+           "bottom": -15
+         }
+       }
+     }'>
+    <i class="fas fa-angle-up"></i>
+  </a>
+  <!-- End Go to Top -->
+
+  <!-- JS Global Compulsory  -->
+  <script src="{{ asset('template/assets/vendor/jquery/dist/jquery.min.js')}}"></script>
+  <script src="{{ asset('template/assets/vendor/jquery-migrate/dist/jquery-migrate.min.js')}}"></script>
+  <script src="{{ asset('template/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js')}}"></script>
+
+  <!-- JS Implementing Plugins -->
+  <script src="{{ asset('template/assets/vendor/hs-header/dist/hs-header.min.js')}}"></script>
+  <script src="{{ asset('template/assets/vendor/hs-go-to/dist/hs-go-to.min.js')}}"></script>
+  <script src="{{ asset('template/assets/vendor/hs-unfold/dist/hs-unfold.min.js')}}"></script>
+  <script src="{{ asset('template/assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.js')}}"></script>
+  <script src="{{ asset('template/assets/vendor/slick-carousel/slick/slick.js')}}"></script>
+  <script src="{{ asset('template/assets/vendor/jquery-validation/dist/jquery.validate.min.js')}}"></script>
+  <script src="{{ asset('template/assets/vendor/aos/dist/aos.js')}}"></script>
+
+  <!-- JS Front -->
+  <script src="./assets/js/theme.min.js"></script>
+
+  <!-- JS Plugins Init. -->
+  <script>
+    $(document).on('ready', function () {
+      // INITIALIZATION OF HEADER
+      // =======================================================
+      var header = new HSHeader($('#header')).init();
+
+
+      // INITIALIZATION OF MEGA MENU
+      // =======================================================
+      var megaMenu = new HSMegaMenu($('.js-mega-menu'), {
+        desktop: {
+          position: 'left'
         }
-      }
-    </style>
+      }).init();
 
-    
-  </head>
-  <body>
-    
 
-<main>
+      // INITIALIZATION OF UNFOLD
+      // =======================================================
+      var unfold = new HSUnfold('.js-hs-unfold-invoker').init();
 
-  <section class="py-10 text-center container">
-    <div class="row py-lg-5">
-      <div class="col-lg-8 col-md-9 mx-auto">
-        <h3 class="fw-light">Inventarisasi Aplikasi OPD</h3>
-        <p class="lead text-muted">Sistem Informasi Aplikasi Organisasi Perangkat Daerah.</p>
-        <p>
-          <a href="/login" class="btn btn-primary my-2">Lihat Dokumen</a>
-        </p>
-      </div>
-    </div>
-  </section>
 
-  <div class="album py-5 bg-light">
-    <div class="container">
+      // INITIALIZATION OF SLICK CAROUSEL
+      // =======================================================
+      $('.js-slick-carousel').each(function() {
+        var slickCarousel = $.HSCore.components.HSSlickCarousel.init($(this));
+      });
 
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        <div class="col">
-          <div class="card shadow-sm">
-          <image class="bd-placeholder-img card-img-top" width="100%" height="225" src="{{ asset('template/assets/image/smart.jpg')}}"xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" alt=""><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></image>
-            <div class="card-body">
-              <p class="card-text">Smartcity Kabupaten Wonosobo.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                <a href="/login" class="btn btn-sm btn-outline-secondary">Lihat</a>
-                  <a href="/login" class="btn btn-sm btn-outline-secondary">Edit</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-          <image class="bd-placeholder-img card-img-top" width="100%" height="225" src="{{ asset('template/assets/image/news.jpg')}}"xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" alt=""><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></image>
 
-            <div class="card-body">
-              <p class="card-text">Wonosobo News.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                <a href="/login" class="btn btn-sm btn-outline-secondary">Lihat</a>
-                  <a href="/login" class="btn btn-sm btn-outline-secondary">Edit</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-          <image class="bd-placeholder-img card-img-top" width="100%" height="225" src="{{ asset('template/assets/image/sds.jpg')}}"xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" alt=""><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></image>
+      // INITIALIZATION OF FORM VALIDATION
+      // =======================================================
+      $('.js-validate').each(function () {
+        var validation = $.HSCore.components.HSValidation.init($(this));
+      });
 
-            <div class="card-body">
-              <p class="card-text">Single Data System.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <a href="/login" class="btn btn-sm btn-outline-secondary">Lihat</a>
-                  <a href="/login" class="btn btn-sm btn-outline-secondary">Edit</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
-</main>
+      // INITIALIZATION OF AOS
+      // =======================================================
+      AOS.init({
+        duration: 650,
+        once: true
+      });
 
-    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
-      
-  </body>
+      // INITIALIZATION OF GO TO
+      // =======================================================
+      $('.js-go-to').each(function () {
+        var goTo = new HSGoTo($(this)).init();
+      });
+    });
+  </script>
+
+  <!-- IE Support -->
+  <script>
+    if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="./assets/vendor/babel-polyfill/dist/polyfill.js"><\/script>');
+  </script>
+</body>
 </html>
+
+
 
 
 
