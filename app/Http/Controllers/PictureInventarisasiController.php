@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Belumpunya;
-use App\Models\Sudahpunya;
+use App\Models\PictureInventarisasi;
 
-class PantauanController extends Controller
+class PictureInventarisasiController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +14,7 @@ class PantauanController extends Controller
      */
     public function index()
     {
-        //
+        return view('picture_inventarisasi.create');
     }
 
     /**
@@ -36,8 +35,36 @@ class PantauanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       // tidak ada foto
+       if ($request->image == null) {
+        $a = PictureInventarisasi::create([
+            'image' => null,
+            'nama_aplikasi' => $request->nama_aplikasi,
+            'url' => $request->url,
+            'keterangan' => $request->keterangan,
+        ]);
+
+        return redirect('pictureinventarisasi');
+    } else {
+        //  ada foto
+        // menyimpan data file yang diupload ke variabel $file
+        $file = $request->file('image');
+        $nama_file = time() . "_" . $file->getClientOriginalName();
+
+        // isi dengan nama folder tempat kemana file diupload
+        $tujuan_upload = 'img_upload/';
+        $file->move($tujuan_upload, $nama_file);
+        // dd($file);
+        $a = PictureInventarisasi::create([
+            'image' => $nama_file,
+            'nama_aplikasi' => $request->nama_aplikasi,
+            'url' => $request->url,
+            'keterangan' => $request->keterangan,
+        ]);
+
+        return redirect('pictureinventarisasi');
     }
+}
 
     /**
      * Display the specified resource.
@@ -82,23 +109,5 @@ class PantauanController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    public function pantauan(Request $request)
-    {   $title= 'Pantauan';
-        
-        $data = '';
-        if($request->filled('q')){
-            $a = substr($request->q, 0, 5);
-                switch ($a) {
-                    case "TKTBL":
-                        $data = Belumpunya::whereNo($request->q)->first();
-                        break;
-                    case "TKTSD":  
-                        $data = Sudahpunya::whereNo($request->q)->first();
-                        break;
-                    }
-        }
-        return view('pantauan', compact('data', 'title'));
     }
 }

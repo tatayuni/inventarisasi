@@ -25,6 +25,8 @@ class CreateSudahPunyaAplikasiTable extends Migration
             $table->string('versi_db');
             $table->string('bahasa_pemrograman');
             $table->string('status');
+            $table->unsignedBigInteger('approval_by')->nullable();
+            $table->timestamp('approval_date')->nullable();
             $table->timestamps();
         });
     }

@@ -83,7 +83,7 @@
 
         <div class="col-sm-6 col-lg-4 px-2 px-lg-3 mb-3 mb-lg-0" data-aos="fade-up" data-aos-delay="150">
           <!-- Card -->
-          <a class="card bg-dark text-left h-100 transition-3d-hover" href="{{route ('layanan.inventarisasi')}}">
+          <a class="card bg-dark text-left h-100 transition-3d-hover" href="{{route ('layanan-inventarisasi.index')}}">
             <div class="card-body">
               <div class="mb-5">
                 <h3 class="text-white">Inventarisasi</h3>

@@ -41,12 +41,12 @@
   @if(!Session::has('keterangan'))
     
 <main>  
-    <div class="d-flex gap-5 justify-content-center" id="dropdownIcons">
-      <div class="col-md-9 ">
-        <div class="h-100 p-5 text-white bg-dark rounded-3 ">
-        <h1 class="text-white">Prosedur</h1>
+    <div class="justify-content-center" id="dropdownIcons">
+      <div class="col-md-max ">
+        <div class="h-100 p-5 text-dark bg-light rounded-3">
+        <h1 class="text-dark">Prosedur</h1>
         <p>Bagi Organisasi Perangkat Daerah di lingkungan Kabupaten Wonosobo yang akan membuat/membangun website atau aplikasi dapat mengajukan permohonan kepada Dinas Komunikasi dan Informatika Kabupaten Wonosobo dengan prsedur sebagai berikut.</p>
-        <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target=".bd-example-modal-lg">Lihat Prosedur &raquo;</button>
+        <button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target=".bd-example-modal-lg">Lihat Prosedur &raquo;</button>
         </div>
       </div>
     </div>
@@ -54,8 +54,6 @@
 </main>
 
 <!-- Large modal -->
-
-
 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content p-5 ">
@@ -79,6 +77,7 @@
 </div>
 
 <div class="container text-center">
+<div class="h-100 p-5 bg-light text-white order rounded-3 mb-5 mt-0">
 <div class="btn-group btn-group-toggle">
   <a class="js-animation-link btn btn-sm btn-outline-secondary btn-sm-wide active" href="javascript:;"
      data-hs-show-animation-options='{
@@ -269,7 +268,7 @@
           </div>
 
           <div class="text-center">
-            <button type="submit" class="btn btn-primary btn-wide transition-3d-hover mb-4">Submit</button>
+            <button type="submit" class="btn btn-secondary btn-wide transition-3d-hover mb-4">Submit</button>
             <p class="small">We'll get back to you in 1-2 business days.</p>
           </div>
           {{ Form::close() }}
@@ -311,6 +310,7 @@
   </html>
   </div>
   </div>
+    </div>
     <!-- End Hero Section -->
   </main>
   <!-- ========== END MAIN CONTENT ========== -->

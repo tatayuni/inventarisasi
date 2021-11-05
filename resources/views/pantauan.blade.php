@@ -30,11 +30,7 @@
               </div>
             </div>
 
-            <div class="col-lg-7">
-
-
-
-
+        <div class="col-lg-7 mt-7">
         <!-- Search Section -->
         <div class="bg-dark">
               <div class="bg-img-hero-center" style="background-image: url({{ asset('template/assets/svg/components/abstract-shapes-19.svg')}});">
@@ -56,13 +52,12 @@
             </div>
             <!-- End Search Section -->
                 <!-- Breadcrumbs Section -->
+    @if(request('q') != '')
     <div class="container space-1">
       <div class="w-lg-80 mx-lg-auto">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb breadcrumb-no-gutter font-size-1">
-          @if(request('q') != '')
         Berikut adalah hasil pencarian dengan nomor tiket &nbsp; <b>{{$data->no}}</b>
-      
           </ol>
         </nav>
       </div>
@@ -71,18 +66,17 @@
 
     
     <!-- FAQ Section -->
-    <div class="w-lg-80 mx-lg-auto">
-    @if($data->status == 'STATUS_ST_02')
+    <div class="w-lg-80 mx-lg-auto ">
+    @if($data->status == 'STATUS_ST_01' && $data->approval_by =='' ||  $data->status == 'STATUS_ST_02' && $data->approval_by !='' || $data->status == 'STATUS_ST_03' && $data->approval_by !='')
         <a class="card card-frame mb-3 mb-lg-5" >
           <div class="card-body">
             <!-- Icon Block -->
             <div class="media d-block d-sm-flex">
-              <figure class="w-100 max-w-8rem mb-2 mb-sm-0 mr-sm-4">
+              <figure class="w-100 max-w-8rem mb-1 mb-sm-0 mr-sm-4">
                 <img class="img-fluid" src="{{ asset('template/assets/svg/icons/icon-15.svg')}}" alt="SVG">
               </figure>
               <div class="media-body">
                 <h2 class="h3">Berhasil Dikirim !</h2>
-                <h4>Pengajuan Surat Permohonan Pembuatan Aplikasi OPD</h4>
                 <p class="font-size-1 text-body">Mohon ditunggu, sedang dalam proses pengecekan..</p>
               </div>
             </div>
@@ -90,20 +84,19 @@
           </div>
         </a>
       @endif
-      @endif
+     
 
-
-
-        <a class="card card-frame mb-3 mb-lg-5" href="article-description.html">
+      @if( $data->status == 'STATUS_ST_02' && $data->approval_by !='' || $data->status == 'STATUS_ST_03' && $data->approval_by !='')
+        <a class="card card-frame mb-1 mb-lg-5">
           <div class="card-body">
             <!-- Icon Block -->
             <div class="media d-block d-sm-flex">
-              <figure class="w-100 max-w-8rem mb-2 mb-sm-0 mr-sm-4">
-                <img class="img-fluid" src="{{ asset('template/assets/svg/icons/icon-62.svg')}}" alt="SVG">
+              <figure class="w-100 max-w-8rem mb-1 mb-sm-0 mr-sm-4">
+                <img class="img-fluid" src="{{ asset('template/assets/svg/icons/icon-67.svg')}}" alt="SVG">
               </figure>
               <div class="media-body">
-                <h3>Tips, tricks &amp; more</h3>
-                <p class="font-size-1 text-body">Tips and tools for beginners and experts alike.</p>
+                <h3>Sedang Diproses</h3>
+                <p class="font-size-1 text-body">Pengajuan Anda sedang dikerjakan oleh petugas Diskominfo Wonosobo.</p>
                 <div class="media">
                 </div>
               </div>
@@ -111,10 +104,35 @@
             <!-- End Icon Block -->
           </div>
         </a>
+      @endif
+
+      @if($data->status == 'STATUS_ST_03' && $data->approval_by !='')
+        <a class="card card-frame mb-1 mb-lg-5">
+          <div class="card-body">
+            <!-- Icon Block -->
+            <div class="media d-block d-sm-flex">
+              <figure class="w-100 max-w-8rem mb-1 mb-sm-0 mr-sm-4">
+                <img class="img-fluid" src="{{ asset('template/assets/svg/icons/icon-38.svg')}}" alt="SVG">
+              </figure>
+              <div class="media-body">
+                <h3>Sukses !</h3>
+                <p class="font-size-1 text-body">Pengajuan berhasil diselesaikan.</p>
+                <div class="media">
+                </div>
+              </div>
+            </div>
+            <!-- End Icon Block -->
+          </div>
+        </a>
+        @endif
+
+     
 
         
       </div>
     <!-- End FAQ Section -->
+    @endif
+
 
 
 
@@ -125,14 +143,6 @@
       </div>
     </div>
     <!-- End Hero Section -->
-
-    
-   
-
-
-
-
-    
       </main>
   <!-- ========== END MAIN CONTENT ========== -->
 @endsection

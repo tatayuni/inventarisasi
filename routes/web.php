@@ -3,9 +3,11 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardDataController;
 use App\Http\Controllers\InventarisasiController;
+use App\Http\Controllers\InventarisasiiController;
 use App\Http\Controllers\PendaftaranController;
 use App\Http\Controllers\LayananOnlineController;
 use App\Http\Controllers\PantauanController;
+use App\Http\Controllers\PictureInventarisasiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -59,13 +61,15 @@ Route::get('/layananonline/list', [LayananOnlineController::class, 'getBelumpuny
 Route::resource('layananonline', LayananOnlineController::class);
 Route::resource('inventarisasi', InventarisasiController::class);
 Route::resource('pendaftaran', PendaftaranController::class);
+Route::resource('pictureinventarisasi', PictureInventarisasiController::class);
+Route::resource('layanan-inventarisasi', InventarisasiiController::class);
 
 
-Route::get('layanan/inventarisasi', function () {
-    return view('inventarisasi',[
-        "title" => "Inventarisasi"
-    ]);
-})->name('layanan.inventarisasi');
+// Route::get('layanan/inventarisasi', function () {
+//     return view('inventarisasi',[
+//         "title" => "Inventarisasi"
+//     ]);
+// })->name('layanan.inventarisasi');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

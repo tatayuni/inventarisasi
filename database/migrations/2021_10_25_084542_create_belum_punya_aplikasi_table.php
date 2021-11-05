@@ -23,6 +23,8 @@ class CreateBelumPunyaAplikasiTable extends Migration
             $table->string('deskripsi');
             $table->string('alur');
             $table->string('status');
+            $table->unsignedBigInteger('approval_by')->nullable();
+            $table->timestamp('approval_date')->nullable();
             $table->timestamps();
         });
     }

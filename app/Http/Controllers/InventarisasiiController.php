@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Belumpunya;
-use App\Models\Sudahpunya;
+use App\Models\PictureInventarisasi;
+use DB;
 
-class PantauanController extends Controller
+class InventarisasiiController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,9 @@ class PantauanController extends Controller
      */
     public function index()
     {
-        //
+        $title = 'Inventarisasi';
+        $data = PictureInventarisasi::limit(5)->get();
+        return view('inventarisasi', compact('data', 'title'));
     }
 
     /**
@@ -82,23 +84,5 @@ class PantauanController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    public function pantauan(Request $request)
-    {   $title= 'Pantauan';
-        
-        $data = '';
-        if($request->filled('q')){
-            $a = substr($request->q, 0, 5);
-                switch ($a) {
-                    case "TKTBL":
-                        $data = Belumpunya::whereNo($request->q)->first();
-                        break;
-                    case "TKTSD":  
-                        $data = Sudahpunya::whereNo($request->q)->first();
-                        break;
-                    }
-        }
-        return view('pantauan', compact('data', 'title'));
     }
 }
