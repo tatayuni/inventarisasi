@@ -5,6 +5,7 @@ use App\Http\Controllers\DashboardDataController;
 use App\Http\Controllers\InventarisasiController;
 use App\Http\Controllers\PendaftaranController;
 use App\Http\Controllers\LayananOnlineController;
+use App\Http\Controllers\PantauanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,11 +31,13 @@ Route::get('/layanan-online', function () {
     ]);
 })->name('layanan-online');
 
-Route::get('/pantauan', function () {
-    return view('pantauan',[
-        "title" => "Pantauan"
-    ]);
-})->name('pantauan');
+// Route::get('/pantauan', function () {
+//     return view('pantauan',[
+//         "title" => "Pantauan"
+//     ]);
+// })->name('pantauan');
+
+Route::get('/pantauan', [PantauanController::class, 'pantauan'])->name('pantauan');
 
 
 Route::get('/prosedur', function () {

@@ -33,6 +33,7 @@
           font-size: 3.5rem;
         }
       }
+      
     </style>
   </head>
   <body>
@@ -45,12 +46,37 @@
         <div class="h-100 p-5 text-white bg-dark rounded-3 ">
         <h1 class="text-white">Prosedur</h1>
         <p>Bagi Organisasi Perangkat Daerah di lingkungan Kabupaten Wonosobo yang akan membuat/membangun website atau aplikasi dapat mengajukan permohonan kepada Dinas Komunikasi dan Informatika Kabupaten Wonosobo dengan prsedur sebagai berikut.</p>
-        <a class="btn btn-outline-light" href="{{ route('prosedur')}}" role="button">Lihat Prosedur &raquo;</a>
+        <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target=".bd-example-modal-lg">Lihat Prosedur &raquo;</button>
         </div>
       </div>
     </div>
   </div>
 </main>
+
+<!-- Large modal -->
+
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content p-5 ">
+    <h3 class="m-5">Prosedur Pengajuan Surat Permohonan Pembuatan Aplikasi OPD</h3>
+                <p> Nama domain instansi pemerintahan telah diatur dalam Peraturan Menteri KOMINFO RI Nomor 5 Tahun 2015
+                Tentang Registrasi Nama Domain Instansi Penyelenggara Negara, maka bagi Organisasi Perangkat Daerah di lingkup
+                Kabupaten Wonosobo yang akan membuat/membangun website atau aplikasi sistem informasi berbasis web 
+                dapat mengajukan permohonan subdomain sekaligus hosting ke Dinas Komunikasi dan Informatika Kabupaten Wonosobo 
+                dengan tahapan/alur sebagai berikut :</p>
+                <p>I. TAHAP / ALUR</p>
+                <hr>
+                <p>1. Perangkat Daerah (pemohon) mengajukan permohonan pembuatan aplikasi kepada Dinas Komunikasi dan 
+                  Informatika dengan mengisi form yang tertera pada menu Layanan Online.
+                <p>2. Melengkapi dokumen/form sesuai dengan yang disediakan.</p>
+                <p>3. Setelah pengisian form selesai pemohon akan mendapatkan email ke alamat email yang diisi pada form .</p>
+                <p>4. Persetujuan pembuatan aplikasi akan dikonfirmasikan apabila disetujui maka mengirimkan konfirmasi persetujuan domain yang didaftarkan kepada pemohon dan apabila ditolak maka akan mengirimkan pemberitahuan penolakan kepada pemohon .</p>
+                <p>5. Pemohon dapat melakukan pantauan surat melalui menu Pantauan.</p>
+                </p>
+    </div>
+  </div>
+</div>
 
 <div class="container text-center">
 <div class="btn-group btn-group-toggle">

@@ -1,4 +1,5 @@
 @extends('layouts.main')
+@section('title', 'Pantauan')
 
 @section('container')
 
@@ -14,7 +15,6 @@
               <div class="mb-5 mt-11">
                 <h2 class="display-4 mb-3">
                   Halaman 
-
                   <span class="text-primary text-highlight-warning">
                     <span class="js-text-animation"
                           data-hs-typed-options='{
@@ -28,17 +28,109 @@
                 </h2>
                 <p class="lead">Pelayanan publik yang berkualitas akan menjaga dan membentuk suatu sistem ketertiban dan masyarakat yang harmonis .</p>
               </div>
+            </div>
 
-              
+            <div class="col-lg-7">
+
+
+
+
+        <!-- Search Section -->
+        <div class="bg-dark">
+              <div class="bg-img-hero-center" style="background-image: url({{ asset('template/assets/svg/components/abstract-shapes-19.svg')}});">
+                <div class="container space-1">
+                  <div class="w-lg-100 mx-lg-auto">
+                    <!-- Input -->
+                    <form method="get" class="input-group input-group-merge input-group-borderless">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="askQuestions">
+                          <i class="fas fa-search"></i>
+                        </span>
+                      </div>
+                      <input name="q" type="search" class="form-control" placeholder="Masukkan Nomor Tiket" aria-label="Search for answers" aria-describedby="askQuestions">
+                    </form>
+                    <!-- End Input -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Search Section -->
+                <!-- Breadcrumbs Section -->
+    <div class="container space-1">
+      <div class="w-lg-80 mx-lg-auto">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb breadcrumb-no-gutter font-size-1">
+          @if(request('q') != '')
+        Berikut adalah hasil pencarian dengan nomor tiket &nbsp; <b>{{$data->no}}</b>
+      
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <!-- End Breadcrumbs Section -->
+
+    
+    <!-- FAQ Section -->
+    <div class="w-lg-80 mx-lg-auto">
+    @if($data->status == 'STATUS_ST_02')
+        <a class="card card-frame mb-3 mb-lg-5" >
+          <div class="card-body">
+            <!-- Icon Block -->
+            <div class="media d-block d-sm-flex">
+              <figure class="w-100 max-w-8rem mb-2 mb-sm-0 mr-sm-4">
+                <img class="img-fluid" src="{{ asset('template/assets/svg/icons/icon-15.svg')}}" alt="SVG">
+              </figure>
+              <div class="media-body">
+                <h2 class="h3">Berhasil Dikirim !</h2>
+                <h4>Pengajuan Surat Permohonan Pembuatan Aplikasi OPD</h4>
+                <p class="font-size-1 text-body">Mohon ditunggu, sedang dalam proses pengecekan..</p>
+              </div>
+            </div>
+            <!-- End Icon Block -->
+          </div>
+        </a>
+      @endif
+      @endif
+
+
+
+        <a class="card card-frame mb-3 mb-lg-5" href="article-description.html">
+          <div class="card-body">
+            <!-- Icon Block -->
+            <div class="media d-block d-sm-flex">
+              <figure class="w-100 max-w-8rem mb-2 mb-sm-0 mr-sm-4">
+                <img class="img-fluid" src="{{ asset('template/assets/svg/icons/icon-62.svg')}}" alt="SVG">
+              </figure>
+              <div class="media-body">
+                <h3>Tips, tricks &amp; more</h3>
+                <p class="font-size-1 text-body">Tips and tools for beginners and experts alike.</p>
+                <div class="media">
+                </div>
+              </div>
+            </div>
+            <!-- End Icon Block -->
+          </div>
+        </a>
+
+        
+      </div>
+    <!-- End FAQ Section -->
+
+
+
             </div>
           </div>
         </div>
-        <!-- End Content -->
-
-       
+        <!-- End Content --> 
       </div>
     </div>
     <!-- End Hero Section -->
+
+    
+   
+
+
+
 
     
       </main>

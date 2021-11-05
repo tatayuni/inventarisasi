@@ -15,12 +15,14 @@ class CreateBelumPunyaAplikasiTable extends Migration
     {
         Schema::create('belum_punya_aplikasi', function (Blueprint $table) {
             $table->id();
+            $table->string('no');
             $table->string('nama');
             $table->string('opd');
             $table->string('email');
             $table->string('wa');
             $table->string('deskripsi');
             $table->string('alur');
+            $table->string('status');
             $table->timestamps();
         });
     }
