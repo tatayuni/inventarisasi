@@ -43,7 +43,7 @@
                           <i class="fas fa-search"></i>
                         </span>
                       </div>
-                      <input name="q" type="search" class="form-control" placeholder="Masukkan Nomor Tiket" aria-label="Search for answers" aria-describedby="askQuestions">
+                      <input name="q" type="search" class="form-control" placeholder="Masukkan Nomor" aria-label="Search for answers" aria-describedby="askQuestions">
                     </form>
                     <!-- End Input -->
                   </div>

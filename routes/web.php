@@ -56,6 +56,7 @@ Route::get('/devan', function () {
 
 
 Route::get('/inventarisasi/list', [InventarisasiController::class, 'getInventarisasi'])->name('inventarisasi.list');
+Route::get('/pictureinventarisasi/list', [PictureInventarisasiController::class, 'getPicture'])->name('pictureinventarisasi.list');
 Route::get('/pendaftaran/list', [PendaftaranController::class, 'getSudahpunya'])->name('sudah_punya_aplikasi.list');
 Route::get('/layananonline/list', [LayananOnlineController::class, 'getBelumpunya'])->name('belum_punya_aplikasi.list');
 Route::resource('layananonline', LayananOnlineController::class);

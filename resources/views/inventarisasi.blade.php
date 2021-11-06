@@ -126,13 +126,13 @@
             <div class="js-slide mb-4">
               <!-- Card Info -->
               <div class="card h-100">
-                <img class="card-img-top" src="{{ asset('img_upload/'.$datanya->image)}}" alt="Image Description" style="height:200px; width:auto;">
+                <img class="card-img-top" src="{{ asset('img_upload/'.$datanya->image)}}" alt="Image Description" style="height:200px; width:270px;">
                 <div class="card-body">
                   <h3>{{ $datanya->nama_aplikasi }}</h3>
                   <p class="mb-0">{{ $datanya->keterangan }}</p>
                 </div>
                 <div class="card-footer border-0 pt-0">
-                  <a class="font-weight-bold" href="{{ $datanya->url }}">Go To <i class="fas fa-angle-right fa-sm ml-1"></i></a>
+                  <a class="font-weight-bold" href="{{ $datanya->url }}" target="_blank">Go To <i class="fas fa-angle-right fa-sm ml-1"></i></a>
                 </div>
               </div>
               <!-- End Card Info -->
