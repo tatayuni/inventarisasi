@@ -11,4 +11,17 @@ class Sudahpunya extends Model
     protected $table = 'sudah_punya_aplikasi';
     protected $guarded = [];
     protected $primaryKey = 'id';
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::creating(function ($query) {
+            if($query->no == ''){
+
+                $query->no = gen_no_tiket_sudah_punya();
+
+            }
+        });
+    }
 }

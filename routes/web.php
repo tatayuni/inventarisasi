@@ -3,8 +3,11 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardDataController;
 use App\Http\Controllers\InventarisasiController;
+use App\Http\Controllers\InventarisasiiController;
 use App\Http\Controllers\PendaftaranController;
 use App\Http\Controllers\LayananOnlineController;
+use App\Http\Controllers\PantauanController;
+use App\Http\Controllers\PictureInventarisasiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,11 +33,13 @@ Route::get('/layanan-online', function () {
     ]);
 })->name('layanan-online');
 
-Route::get('/pantauan', function () {
-    return view('pantauan',[
-        "title" => "Pantauan"
-    ]);
-})->name('pantauan');
+// Route::get('/pantauan', function () {
+//     return view('pantauan',[
+//         "title" => "Pantauan"
+//     ]);
+// })->name('pantauan');
+
+Route::get('/pantauan', [PantauanController::class, 'pantauan'])->name('pantauan');
 
 
 Route::get('/prosedur', function () {
@@ -51,18 +56,21 @@ Route::get('/devan', function () {
 
 
 Route::get('/inventarisasi/list', [InventarisasiController::class, 'getInventarisasi'])->name('inventarisasi.list');
+Route::get('/pictureinventarisasi/list', [PictureInventarisasiController::class, 'getPicture'])->name('pictureinventarisasi.list');
 Route::get('/pendaftaran/list', [PendaftaranController::class, 'getSudahpunya'])->name('sudah_punya_aplikasi.list');
 Route::get('/layananonline/list', [LayananOnlineController::class, 'getBelumpunya'])->name('belum_punya_aplikasi.list');
 Route::resource('layananonline', LayananOnlineController::class);
 Route::resource('inventarisasi', InventarisasiController::class);
 Route::resource('pendaftaran', PendaftaranController::class);
+Route::resource('pictureinventarisasi', PictureInventarisasiController::class);
+Route::resource('layanan-inventarisasi', InventarisasiiController::class);
 
 
-Route::get('layanan/inventarisasi', function () {
-    return view('inventarisasi',[
-        "title" => "Inventarisasi"
-    ]);
-})->name('layanan.inventarisasi');
+// Route::get('layanan/inventarisasi', function () {
+//     return view('inventarisasi',[
+//         "title" => "Inventarisasi"
+//     ]);
+// })->name('layanan.inventarisasi');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

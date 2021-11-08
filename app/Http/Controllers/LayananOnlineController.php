@@ -38,7 +38,16 @@ class LayananOnlineController extends Controller
      */
     public function store(Request $request)
     {
-        $data = Belumpunya::create($request->all());
+        $data = Belumpunya::create([
+            'no' => gen_no_tiket_belum_punya(),
+            'nama' => $request->nama,
+            'opd' => $request->opd,
+            'email' => $request->email,
+            'wa' => $request->wa,
+            'deskripsi' => $request->deskripsi,
+            'alur' => $request->alur,
+            'status' => 'STATUS_ST_01'
+        ]);
         if($data){
             Session::flash('keterangan', 'Data berhasil di simpan');
         }

@@ -90,13 +90,18 @@
 
 
     <!-- BEGIN: Main Menu-->
-
     <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow " data-scroll-to-active="true">
         <div class="main-menu-content">
             <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
                 <li class=" nav-item {{Request::is('dashboard') ? 'active' : ''}}"><a href="{{ route('dashboard') }}"><i class="la la-home"></i><span class="menu-title" data-i18n="Dashboard">Dashboard</span></a>
                 </li>
-                 <li class=" nav-item {{Request::is('inventarisasi') ? 'active' : ''}}"><a href="{{ route('inventarisasi.index') }}"><i class="la la-book"></i><span class="menu-title" data-i18n="Dashboard">Data Inventarisasi</span></a>
+                <li class=" nav-item "><a href="#"><i class="la la-book"></i><span class="menu-title" data-i18n="Invoice">Inventarisasi</span></a>
+                    <ul class="menu-content">
+                        <li class="{{Request::is('inventarisasi') ? 'active' : ''}}"><a class="menu-item" href="{{ route('inventarisasi.index') }}"><i></i><span data-i18n="Invoice Summary">Data Inventarisasi</span></a>
+                        </li>
+                        <li class="{{Request::is('pictureinventarisasi') ? 'active' : ''}}"><a class="menu-item" href="{{ route('pictureinventarisasi.index') }}"><i></i><span data-i18n="Invoice Template">Picture</span></a>
+                        </li>
+                    </ul>
                 </li>
                 <li class=" nav-item "><a href="#"><i class="la la-globe"></i><span class="menu-title" data-i18n="Invoice">Layanan Online</span></a>
                     <ul class="menu-content">

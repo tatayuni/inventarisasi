@@ -89,7 +89,7 @@ class InventarisasiController extends Controller
             'integrasi_aplikasi'=>$request->integrasi_aplikasi,
             'jenis_aplikasi'=>$request->jenis_aplikasi,
             'frekuensi_penggunaan'=>$request->frekuensi_penggunaan,
-            'lokasi_server'=>$request->lokasi,
+            'lokasi_server'=>$request->lokasi_server,
             'domain_aplikasi'=>$request->domain_aplikasi,
             'kendala'=>$request->kendala
         ]);

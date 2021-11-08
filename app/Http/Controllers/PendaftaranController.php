@@ -38,7 +38,20 @@ class PendaftaranController extends Controller
 
     public function store(Request $request)
     {
-        $data = Sudahpunya::create($request->all());
+        $data = Sudahpunya::create(
+            [
+                'no' => gen_no_tiket_sudah_punya(),
+                'nama_pengelola' => $request->nama_pengelola,
+                'subdomain' => $request->subdomain,
+                'nama_opd' => $request->nama_opd,
+                'php' => $request->php,
+                'email_pengelola' => $request->email_pengelola,
+                'versi_db' => $request->versi_db,
+                'wa_pengelola' => $request->wa_pengelola,
+                'bahasa_pemrograman' => $request->bahasa_pemrograman,
+                'status' => 'STATUS_ST_01'
+            ]
+        );
         Session::flash('keterangan', 'Data berhasil di simpan');
         return redirect(route('layanan-online'));
     }

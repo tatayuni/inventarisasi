@@ -15,6 +15,7 @@ class CreateSudahPunyaAplikasiTable extends Migration
     {
         Schema::create('sudah_punya_aplikasi', function (Blueprint $table) {
             $table->id();
+            $table->string('no');
             $table->string('nama_pengelola');
             $table->string('nama_opd');
             $table->string('email_pengelola');
@@ -23,6 +24,9 @@ class CreateSudahPunyaAplikasiTable extends Migration
             $table->string('php');
             $table->string('versi_db');
             $table->string('bahasa_pemrograman');
+            $table->string('status');
+            $table->unsignedBigInteger('approval_by')->nullable();
+            $table->timestamp('approval_date')->nullable();
             $table->timestamps();
         });
     }

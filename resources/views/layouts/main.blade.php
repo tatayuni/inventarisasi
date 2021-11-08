@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <!-- Title -->
-  <title>{{ $title }}</title>
+  <title>{{ $title ?? 'DISKOMINFO'}}</title>
 
   <!-- Required Meta Tags Always Come First -->
   <meta charset="utf-8">
@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="{{ asset('template/assets/vendor/dzsparallaxer/dzsparallaxer.css')}}">
   <link rel="stylesheet" href="{{ asset('template/assets/vendor/cubeportfolio/css/cubeportfolio.min.css')}}">
   <link rel="stylesheet" href="{{ asset('template/assets/vendor/aos/dist/aos.css')}}">
+  <link rel="stylesheet" href="{{ asset('template/assets/vendor/slick-carousel/slick/slick.css')}}">
 
   <!-- CSS Front Template -->
   <link rel="stylesheet" href="{{ asset('template/assets/css/theme.min.css')}}">
@@ -292,6 +293,7 @@
   <script src="{{ asset('template/assets/vendor/dzsparallaxer/dzsparallaxer.js')}}"></script>
   <script src="{{ asset('template/assets/vendor/typed.js/lib/typed.min.js')}}"></script>
   <script src="{{ asset('template/assets/vendor/aos/dist/aos.js')}}"></script>
+  <script src="{{ asset('template/assets/vendor/slick-carousel/slick/slick.js')}}"></script>
 
   <!-- JS Front -->
   <script src="{{asset('template/assets/js/theme.min.js')}}"></script>
@@ -316,6 +318,12 @@
       // INITIALIZATION OF UNFOLD
       // =======================================================
       var unfold = new HSUnfold('.js-hs-unfold-invoker').init();
+
+       // INITIALIZATION OF SLICK CAROUSEL
+      // =======================================================
+      $('.js-slick-carousel').each(function() {
+        var slickCarousel = $.HSCore.components.HSSlickCarousel.init($(this));
+      });
 
 
       // INITIALIZATION OF TEXT ANIMATION (TYPING)
