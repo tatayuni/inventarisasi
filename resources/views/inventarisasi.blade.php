@@ -101,6 +101,8 @@
                  "nextArrow": "<span class=\"fas fa-arrow-right slick-arrow slick-arrow-primary-white slick-arrow-right slick-arrow-centered-y shadow-soft rounded-circle mr-n2\"></span>",
                  "slidesToShow": 3,
                  "infinite": true,
+                 "autoplay": true,
+                 "autoplaySpeed": 3000,
                  "dots": true,
                  "dotsClass": "slick-pagination slick-pagination-white d-none mt-5",
                  "responsive": [{
@@ -120,90 +122,24 @@
                    }
                  }]
                }'>
+              @foreach($data as $datanya)
             <div class="js-slide mb-4">
               <!-- Card Info -->
               <div class="card h-100">
-                <img class="card-img-top" src="{{ asset('template/assets/img/480x320/img7.jpg')}}" alt="Image Description">
+                <img class="card-img-top" src="{{ asset('img_upload/'.$datanya->image)}}" alt="Image Description" style="height:200px; width:270px;">
                 <div class="card-body">
-                  <div class="max-w-13rem w-100 mb-3">
-                    <img class="img-fluid" src="{{ asset('template/assets/svg/clients-logo/airbnb-original.svg')}}" alt="Logo">
-                  </div>
-                  <p class="mb-0">Front Projects has proved to be most efficient cloud based project tracking and bug tracking tool.</p>
+                  <h3>{{ $datanya->nama_aplikasi }}</h3>
+                  <p class="mb-0">{{ $datanya->keterangan }}</p>
                 </div>
                 <div class="card-footer border-0 pt-0">
-                  <a class="font-weight-bold" href="./page-customer-story.html">Read story <i class="fas fa-angle-right fa-sm ml-1"></i></a>
+                  <a class="font-weight-bold" href="{{ $datanya->url }}" target="_blank">Go To <i class="fas fa-angle-right fa-sm ml-1"></i></a>
                 </div>
               </div>
               <!-- End Card Info -->
             </div>
+            @endforeach
 
-            <div class="js-slide mb-4">
-              <!-- Card Info -->
-              <div class="card h-100">
-                <img class="card-img-top" src="{{ asset('template/assets/img/480x320/img6.jpg')}}" alt="Image Description">
-                <div class="card-body">
-                  <div class="max-w-13rem w-100 mb-3">
-                    <img class="img-fluid" src="{{ asset('template/assets/svg/clients-logo/slack-original.svg')}}" alt="Logo">
-                  </div>
-                  <p class="mb-0">Front Projects has proved to be most efficient cloud based project tracking and bug tracking tool.</p>
-                </div>
-                <div class="card-footer border-0 pt-0">
-                  <a class="font-weight-bold" href="./page-customer-story.html">Read story <i class="fas fa-angle-right fa-sm ml-1"></i></a>
-                </div>
-              </div>
-              <!-- End Card Info -->
-            </div>
-
-            <div class="js-slide mb-4">
-              <!-- Card Info -->
-              <div class="card h-100">
-                <img class="card-img-top" src="{{ asset('template/assets/img/480x320/img14.jpg')}}" alt="Image Description">
-                <div class="card-body">
-                  <div class="max-w-13rem w-100 mb-3">
-                    <img class="img-fluid" src="{{ asset('template/assets/svg/clients-logo/paypal-original.svg')}}" alt="Logo">
-                  </div>
-                  <p class="mb-0">Front Projects has proved to be most efficient cloud based project tracking and bug tracking tool.</p>
-                </div>
-                <div class="card-footer border-0 pt-0">
-                  <a class="font-weight-bold" href="./page-customer-story.html">Read story <i class="fas fa-angle-right fa-sm ml-1"></i></a>
-                </div>
-              </div>
-              <!-- End Card Info -->
-            </div>
-
-            <div class="js-slide mb-4">
-              <!-- Card Info -->
-              <div class="card h-100">
-                <img class="card-img-top" src="{{ asset('template/assets/img/480x320/img12.jpg')}}" alt="Image Description">
-                <div class="card-body">
-                  <div class="max-w-13rem w-100 mb-3">
-                    <img class="img-fluid" src="{{ asset('template/assets/svg/clients-logo/fitbit-original.svg')}}" alt="Logo">
-                  </div>
-                  <p class="mb-0">Google is an innovator in public safety technology. First-to-market with TASER conducted energy weapons (CEWs).</p>
-                </div>
-                <div class="card-footer border-0 pt-0">
-                  <a class="font-weight-bold" href="./page-customer-story.html">Read story <i class="fas fa-angle-right fa-sm ml-1"></i></a>
-                </div>
-              </div>
-              <!-- End Card Info -->
-            </div>
-
-            <div class="js-slide mb-4">
-              <!-- Card Info -->
-              <div class="card h-100">
-                <img class="card-img-top" src="{{ asset('template/assets/img/480x320/img27.jpg')}}" alt="Image Description">
-                <div class="card-body">
-                  <div class="max-w-13rem w-100 mb-3">
-                    <img class="img-fluid" src="{{ asset('template/assets/svg/clients-logo/hubspot-original.svg')}}" alt="Logo">
-                  </div>
-                  <p class="mb-0">Visitors can build a form or survey before signing up, but in order to save and share it.</p>
-                </div>
-                <div class="card-footer border-0 pt-0">
-                  <a class="font-weight-bold" href="./page-customer-story.html">Read story <i class="fas fa-angle-right fa-sm ml-1"></i></a>
-                </div>
-              </div>
-              <!-- End Card Info -->
-            </div>
+          
           </div>
           <!-- End Slick Carousel -->
         </div>
@@ -411,4 +347,3 @@
 
 @endsection
   
-
