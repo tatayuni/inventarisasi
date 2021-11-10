@@ -60,10 +60,10 @@
                                                 <thead>
                                                     <tr>
                                                         <th>No</th>
-                                                        <th>Name</th>
-                                                        <th>OPD</th>
+                                                        <th>Nomor Pengajuan</th>
+                                                        <th>Nama</th>
                                                         <th>Email</th>
-                                                        <th>Whatsapp</th>  
+                                                        <th>Status</th>   
                                                         <th>Aksi</th>
                                                     </tr>
                                                 </thead>
@@ -89,11 +89,11 @@
         serverSide: true,
         ajax: "{{ route('sudah_punya_aplikasi.list') }}",
         columns: [
-					{data: 'DT_RowIndex', name: 'DT_RowIndex'},
-                    {data: 'nama_pengelola',  },
-                    {data: 'nama_opd', },
-                    {data: 'email_pengelola', },
-                    {data: 'wa_pengelola', },
+                    {data: 'DT_RowIndex', name: 'DT_RowIndex'},
+                    {data: 'no',  },
+                    {data: 'nama',  },
+                    {data: 'email', },
+                    {data: 'status', name:'status.code_cd'},
 					    {
 						data: 'action', 
 						name: 'action', 

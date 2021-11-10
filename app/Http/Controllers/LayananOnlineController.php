@@ -7,7 +7,6 @@ use App\Models\Belumpunya;
 use DataTables;
 use Session;
 
-
 class LayananOnlineController extends Controller
 {
     /**
@@ -62,7 +61,7 @@ class LayananOnlineController extends Controller
      */
     public function show($id)
     {
-        $data = Belumpunya::find($id);
+        $data = Belumpunya::with(['status'])->find($id);
 
         return view('layananonline.show', compact('data'));
     }
@@ -88,12 +87,8 @@ class LayananOnlineController extends Controller
     public function update(Request $request, $id)
     {
         Belumpunya::find($id)->update([
-            'nama'=>$request->nama,
-            'opd'=>$request->opd,
-            'email'=> $request->email,
-            'wa'=>$request->wa,
-            'deskripsi'=>$request->deskripsi,
-            'alur'=>$request->alur,
+            'status'=>$request->status,
+            'approval_by' => auth()->user()->id,
         ]);
 
         Session::flash('status', 'Data berhasil di update');
@@ -131,15 +126,25 @@ class LayananOnlineController extends Controller
                 return $data->nama;
             })
 
-            ->editColumn('opd', function ($data) {
-                return $data->opd;
+            ->editColumn('no', function ($data) {
+                return $data->no;
             })
             ->editColumn('email', function ($data) {
                 return $data->email;
             })
-            ->editColumn('wa', function ($data) {
-                return $data->wa;
+            ->editColumn('status', function ($data) {
+                if($data->status == 'STATUS_ST_01' ){
+                    return 'Menunggu Persetujuan';
+                } else if($data->status == 'STATUS_ST_02'){
+                    return 'Disetujui';
+                } else if($data->status == 'STATUS_ST_03'){
+                    return 'Ditolak';
+                } else {
+                    return 'Sukses';
+                }
+                return $data->status;
             })
+
             ->rawColumns(['action', 'status'])
             ->make(true);
     }

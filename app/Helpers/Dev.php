@@ -1,4 +1,9 @@
 <?php
+if(!function_exists('get_code_group')){
+    function get_code_group($code){
+        return \App\Models\ComCode::where('code_group', $code)->pluck('code_nm', 'code_cd');
+    }
+}
 if(!function_exists('gen_no_tiket_belum_punya')){
     function gen_no_tiket_belum_punya(){
         $no = Date('y-m-').str_pad(1, 3, '0', STR_PAD_LEFT );

@@ -53,7 +53,7 @@
             <!-- End Search Section -->
                 <!-- Breadcrumbs Section -->
     @if(request('q') != '')
-    <div class="container space-1">
+    <div class="container space-0">
       <div class="w-lg-80 mx-lg-auto">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb breadcrumb-no-gutter font-size-1">
@@ -66,13 +66,13 @@
 
     
     <!-- FAQ Section -->
-    <div class="w-lg-80 mx-lg-auto ">
-    @if($data->status == 'STATUS_ST_01' && $data->approval_by =='' ||  $data->status == 'STATUS_ST_02' && $data->approval_by !='' || $data->status == 'STATUS_ST_03' && $data->approval_by !='')
-        <a class="card card-frame mb-3 mb-lg-5" >
+    <div class="w-lg-100 mx-lg-auto">
+    @if($data->status == 'STATUS_ST_01' && $data->approval_by =='' ||  $data->status == 'STATUS_ST_02'|| $data->status == 'STATUS_ST_03' || $data->status == 'STATUS_ST_04')
+        <a class="card" >
           <div class="card-body">
             <!-- Icon Block -->
             <div class="media d-block d-sm-flex">
-              <figure class="w-100 max-w-8rem mb-1 mb-sm-0 mr-sm-4">
+              <figure class="w-100 max-w-8rem mb-sm-0 mr-sm-4">
                 <img class="img-fluid" src="{{ asset('template/assets/svg/icons/icon-15.svg')}}" alt="SVG">
               </figure>
               <div class="media-body">
@@ -86,12 +86,12 @@
       @endif
      
 
-      @if( $data->status == 'STATUS_ST_02' && $data->approval_by !='' || $data->status == 'STATUS_ST_03' && $data->approval_by !='')
-        <a class="card card-frame mb-1 mb-lg-5">
+      @if( $data->status == 'STATUS_ST_02'|| $data->status == 'STATUS_ST_03')
+        <a class="card">
           <div class="card-body">
             <!-- Icon Block -->
             <div class="media d-block d-sm-flex">
-              <figure class="w-100 max-w-8rem mb-1 mb-sm-0 mr-sm-4">
+              <figure class="w-100 max-w-8rem mb-sm-0 mr-sm-4">
                 <img class="img-fluid" src="{{ asset('template/assets/svg/icons/icon-67.svg')}}" alt="SVG">
               </figure>
               <div class="media-body">
@@ -106,12 +106,33 @@
         </a>
       @endif
 
-      @if($data->status == 'STATUS_ST_03' && $data->approval_by !='')
-        <a class="card card-frame mb-1 mb-lg-5">
+      @if( $data->status == 'STATUS_ST_04'|| $data->status == 'STATUS_ST_03')
+        <a class="card">
           <div class="card-body">
             <!-- Icon Block -->
             <div class="media d-block d-sm-flex">
-              <figure class="w-100 max-w-8rem mb-1 mb-sm-0 mr-sm-4">
+              <figure class="w-100 max-w-8rem mb-sm-0 mr-sm-4">
+                <img class="img-fluid" src="{{ asset('template/assets/svg/icons/icon-61.svg')}}" alt="SVG">
+              </figure>
+              <div class="media-body">
+                <h3>Ditolak</h3>
+                <p class="font-size-1 text-body">Mohon maaf, pengajuan Anda ditolak.</p>
+                <div class="media">
+                </div>
+              </div>
+            </div>
+            <!-- End Icon Block -->
+          </div>
+        </a>
+      @endif
+      
+
+      @if($data->status == 'STATUS_ST_03')
+        <a class="card">
+          <div class="card-body">
+            <!-- Icon Block -->
+            <div class="media d-block d-sm-flex">
+              <figure class="w-100 max-w-8rem mb-sm-0 mr-sm-4">
                 <img class="img-fluid" src="{{ asset('template/assets/svg/icons/icon-38.svg')}}" alt="SVG">
               </figure>
               <div class="media-body">

@@ -24,4 +24,9 @@ class Belumpunya extends Model
             }
         });
     }
+
+    public function status()
+    {
+        return $this->belongsTo(ComCode::class,'status_st');
+    }
 }

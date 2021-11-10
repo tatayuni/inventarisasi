@@ -90,17 +90,9 @@ class PendaftaranController extends Controller
     public function update(Request $request, $id)
     {
         Sudahpunya::find($id)->update([
-            'nama_pengelola'=>$request->nama_pengelola,
-            'nama_opd'=>$request->nama_opd,
-            'email_pengelola'=> $request->email_pengelola,
-            'wa_pengelola'=>$request->wa_pengelola,
-            'subdomain'=>$request->subdomain,
-            'php'=>$request->php,
-            'versi_db'=>$request->versi_db,
-            'bahasa_pemrograman'=>$request->bahasa_pemrograman
-           
+            'status'=>$request->status,
+            'approval_by' => auth()->user()->id,
         ]);
-
         Session::flash('status', 'Data berhasil di update');
         return redirect(route('pendaftaran.index'));
     }
@@ -132,19 +124,29 @@ class PendaftaranController extends Controller
                     return $actionBtn;
                 }
             )
-            ->editColumn('nama_pengelola', function ($data) {
+            ->editColumn('nama', function ($data) {
                 return $data->nama_pengelola;
             })
 
-            ->editColumn('email_pengelola', function ($data) {
+            ->editColumn('no', function ($data) {
+                return $data->no;
+            })
+            ->editColumn('email', function ($data) {
                 return $data->email_pengelola;
             })
-            ->editColumn('nama_opd', function ($data) {
-                return $data->nama_opd;
+            ->editColumn('status', function ($data) {
+                if($data->status == 'STATUS_ST_01' ){
+                    return 'Menunggu Persetujuan';
+                } else if($data->status == 'STATUS_ST_02'){
+                    return 'Disetujui';
+                } else if($data->status == 'STATUS_ST_03'){
+                    return 'Ditolak';
+                } else {
+                    return 'Sukses';
+                }
+                return $data->status;
             })
-            ->editColumn('wa_pengelola', function ($data) {
-                return $data->wa_pengelola;
-            })
+
             ->rawColumns(['action', 'status'])
             ->make(true);
     }

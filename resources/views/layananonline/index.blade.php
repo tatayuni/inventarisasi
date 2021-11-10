@@ -60,10 +60,10 @@
                                                 <thead>
                                                     <tr>
                                                         <th>No</th>
+                                                        <th>Nomor Pengajuan</th>
                                                         <th>Nama</th>
-                                                        <th>OPD</th>
                                                         <th>Email</th>
-                                                        <th>Whatsapp</th>   
+                                                        <th>Status</th>   
                                                         <th>Aksi</th>
                                                     </tr>
                                                 </thead>
@@ -90,10 +90,10 @@
         ajax: "{{ route('belum_punya_aplikasi.list') }}",
         columns: [
 					{data: 'DT_RowIndex', name: 'DT_RowIndex'},
+                    {data: 'no',  },
                     {data: 'nama',  },
-                    {data: 'opd', },
                     {data: 'email', },
-                    {data: 'wa', },
+                    {data: 'status', },
 					    {
 						data: 'action', 
 						name: 'action', 

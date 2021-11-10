@@ -78,3 +78,4 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 Route::resource('/dashboard/data', DashboardDataController::class)
 ->middleware('auth');
+Route::get('/dashboard/logout', [DashboardDataController::class, 'logout'])->name('logout');
