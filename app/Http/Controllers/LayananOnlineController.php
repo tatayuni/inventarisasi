@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Belumpunya;
 use DataTables;
 use Session;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\NotifikasiPendaftaranBelum;
 
 class LayananOnlineController extends Controller
 {
@@ -47,10 +49,9 @@ class LayananOnlineController extends Controller
             'alur' => $request->alur,
             'status' => 'STATUS_ST_01'
         ]);
-        if($data){
-            Session::flash('keterangan', 'Data berhasil di simpan');
-        }
-        return redirect(route('layanan-online'));
+        Session::flash('keterangan', 'Data berhasil di simpan');
+        Mail::to($request->email)->send(new NotifikasiPendaftaranBelum($data));
+        return redirect(route('home'));
     }
 
     /**

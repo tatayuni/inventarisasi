@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Sudahpunya;
 use DataTables;
 use Session;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\NotifikasiPendaftaranSudah;
 
 class PendaftaranController extends Controller
 {
@@ -53,6 +55,7 @@ class PendaftaranController extends Controller
             ]
         );
         Session::flash('keterangan', 'Data berhasil di simpan');
+        Mail::to($request->email)->send(new NotifikasiPendaftaranSudah($data));
         return redirect(route('layanan-online'));
     }
 
