@@ -76,9 +76,9 @@
                         </li>
                     </ul>
                     <ul class="nav navbar-nav float-right">
-                        <li class="dropdown dropdown-user nav-item"><a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown"><span class="mr-1 user-name text-bold-700"> Selamat Datang, {{auth()->user()->name}}</span><span class="avatar avatar-online"><img src="{{ asset('modern-admin/app-assets/images/portrait/small/avatar-s-19.png')}}" alt="avatar"><i></i></span></a>
+                        <li class="dropdown dropdown-user nav-item"><a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown"><span class="mr-1 user-name text-bold-700"> Selamat Datang, {{auth()->user()->name}}</span><span class="avatar avatar-online"><img src="{{ asset('modern-admin/app-assets/images/portrait/small/tata.jpg')}}" alt="avatar"><i></i></span></a>
                             <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="user-profile.html"><i class="ft-user"></i> Edit Profile</a></a>
-                                <div class="dropdown-divider"></div><a class="dropdown-item" href="login-with-bg-image.html"><i class="ft-power"></i> Logout</a>
+                                <div class="dropdown-divider"></div><a class="dropdown-item" href="{{route ('home')}}"><i class="ft-power"></i> Logout</a>
                             </div>
                         </li>
                     </ul>

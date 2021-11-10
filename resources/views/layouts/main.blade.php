@@ -21,6 +21,9 @@
   <link rel="stylesheet" href="{{ asset('template/assets/vendor/cubeportfolio/css/cubeportfolio.min.css')}}">
   <link rel="stylesheet" href="{{ asset('template/assets/vendor/aos/dist/aos.css')}}">
   <link rel="stylesheet" href="{{ asset('template/assets/vendor/slick-carousel/slick/slick.css')}}">
+  <link rel="stylesheet" href="{{ asset('template/assets/vendor/@fancyapps/fancybox/dist/jquery.fancybox.min.css')}}">
+
+  
 
   <!-- CSS Front Template -->
   <link rel="stylesheet" href="{{ asset('template/assets/css/theme.min.css')}}">
@@ -295,6 +298,11 @@
   <script src="{{ asset('template/assets/vendor/aos/dist/aos.js')}}"></script>
   <script src="{{ asset('template/assets/vendor/slick-carousel/slick/slick.js')}}"></script>
 
+  <script src="{{ asset('template/assets/vendor/@fancyapps/fancybox/dist/jquery.fancybox.min.js')}}"></script>
+  <script src="{{ asset('template/assets/vendor/appear/dist/appear.min.js')}}"></script>
+  <script src="{{ asset('template/assets/vendor/circles.js/circles.js')}}"></script>
+ 
+
   <!-- JS Front -->
   <script src="{{asset('template/assets/js/theme.min.js')}}"></script>
 
@@ -365,6 +373,19 @@
         var counter = new HSCounter($(this)).init();
       });
 
+      // INITIALIZATION OF FANCYBOX
+      // =======================================================
+      $('.js-fancybox').each(function () {
+        var fancybox = $.HSCore.components.HSFancyBox.init($(this));
+      });
+
+
+      // INITIALIZATION OF CIRCLES
+      // =======================================================
+      $('.js-circle').each(function () {
+        var circle = $.HSCore.components.HSCircles.init($(this));
+      });
+
 
       // INITIALIZATION OF STICKY BLOCK
       // =======================================================
@@ -412,9 +433,12 @@
     });
   </script>
 
+
   <!-- IE Support -->
   <script>
     if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="{{ asset('template/assets/vendor/babel-polyfill/dist/polyfill.js')}}"><\/script>');
   </script>
+
+  
 </body>
 </html>

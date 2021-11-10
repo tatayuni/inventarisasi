@@ -86,7 +86,7 @@
       @endif
      
 
-      @if( $data->status == 'STATUS_ST_02' && $data->approval_by !='' || $data->status == 'STATUS_ST_03' && $data->approval_by !='')
+      @if($data->status == 'STATUS_ST_02' && $data->approval_by !='')
         <a class="card card-frame mb-1 mb-lg-5">
           <div class="card-body">
             <!-- Icon Block -->

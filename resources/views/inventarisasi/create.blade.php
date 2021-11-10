@@ -67,7 +67,7 @@
 
                                                 <div class="form-group">
                                                     <label for="complaintinput5">Penggunaan Aplikasi</label>
-                                                    {{Form::textarea('fungsi_aplikasi', null, ['class' => 'form-control round ', 'rows' => '5', 'placeholder' => 'Domain Aplikasi'])}}
+                                                    {{Form::textarea('fungsi_aplikasi', null, ['class' => 'form-control round ', 'rows' => '5', 'placeholder' => 'Penggunaan Aplikasi'])}}
                                                 </div>
 
                                                 <div class="form-group">

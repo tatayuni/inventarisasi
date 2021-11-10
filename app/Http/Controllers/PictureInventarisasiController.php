@@ -103,12 +103,13 @@ class PictureInventarisasiController extends Controller
     {
         // tidak ada foto
        if ($request->image == null) {
-        $a = PictureInventarisasi::update([
+        $a = PictureInventarisasi::find($id)
+        ->update([
             'nama_aplikasi' => $request->nama_aplikasi,
             'url' => $request->url,
             'keterangan' => $request->keterangan,
         ]);
-
+        Session::flash('status', 'Data berhasil di update');
         return redirect('pictureinventarisasi');
     } else {
         $data = PictureInventarisasi::find($id);
