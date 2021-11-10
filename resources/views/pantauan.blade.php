@@ -85,7 +85,6 @@
         </a>
       @endif
      
-
       @if( $data->status == 'STATUS_ST_02'|| $data->status == 'STATUS_ST_03')
         <a class="card">
           <div class="card-body">
